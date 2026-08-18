@@ -38,7 +38,12 @@
               <i class="fa-fw {{ tab.icon }}"></i>
               {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
 
-              <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
+              {% if tab.cross_lang and include.lang != site.lang %}
+                <!-- 英文界面下，语言切换入口显示「中文」 -->
+                <span>中文</span>
+              {% else %}
+                <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
+              {% endif %}
             </a>
           </li>
           <!-- .nav-item -->
