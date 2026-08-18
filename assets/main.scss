@@ -1,0 +1,232 @@
+---
+# 视觉定制入口：覆盖 minima 主题样式
+# 变量在 @import 之前定义（minima 用 !default，可被覆盖）
+---
+
+// ===== 主题变量（浅色基调；深色模式见文件底部媒体查询）=====
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+  "Noto Sans CJK SC", "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+$base-font-size: 16px;
+$base-line-height: 1.7;
+$content-width: 880px;
+
+$text-color: #1f2328;
+$background-color: #f6f8fa;
+$brand-color: #0f766e;
+$grey-color: #59636e;
+$grey-color-light: #d8dee4;
+$grey-color-dark: #2f353b;
+
+@import "minima";
+
+// ===== 定制样式 =====
+:root {
+  --bg: #f6f8fa;
+  --bg-elev: #ffffff;
+  --fg: #1f2328;
+  --fg-soft: #59636e;
+  --brand: #0f766e;
+  --border: #d8dee4;
+  --code-bg: #eef1f4;
+  --card-shadow: 0 1px 3px rgba(31, 35, 40, 0.08);
+  --card-shadow-hover: 0 4px 14px rgba(31, 35, 40, 0.14);
+}
+
+// 顶栏品牌色强调
+.site-header {
+  border-top-color: var(--brand);
+}
+
+.site-title {
+  font-weight: 500;
+}
+
+// 文章列表：卡片化
+.post-list > li {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 22px;
+  box-shadow: var(--card-shadow);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+
+  &:hover {
+    border-color: var(--brand);
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-2px);
+  }
+}
+
+.post-link {
+  font-weight: 600;
+}
+
+// 翻译互链：药丸按钮
+.post-translation a {
+  display: inline-block;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 0.9em;
+  background: var(--bg-elev);
+
+  &:hover {
+    border-color: var(--brand);
+    text-decoration: none;
+  }
+}
+
+// 代码
+code {
+  background: var(--code-bg);
+  border: none;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.875em;
+}
+
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+
+  > code {
+    background: none;
+    padding: 0;
+  }
+}
+
+// 表格
+table {
+  border-radius: 8px;
+
+  th {
+    background-color: #eef1f4;
+  }
+}
+
+// 文章内二级标题加细分隔线
+.post-content h2 {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+}
+
+// 引用块
+blockquote {
+  border-left-color: var(--brand);
+  color: var(--fg-soft);
+}
+
+// 选中文字
+::selection {
+  background: rgba(15, 118, 110, 0.22);
+}
+
+// ===== 深色模式（跟随系统；minima 2.5.1 的 skin 配置不生效，这里手写）=====
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --bg-elev: #161b22;
+    --fg: #e6edf3;
+    --fg-soft: #8b949e;
+    --brand: #2dd4bf;
+    --border: #30363d;
+    --code-bg: #161b22;
+    --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    --card-shadow-hover: 0 4px 14px rgba(0, 0, 0, 0.55);
+  }
+
+  body {
+    color: var(--fg);
+    background-color: var(--bg);
+  }
+
+  a {
+    color: var(--brand);
+
+    &:visited {
+      color: var(--brand);
+    }
+
+    &:hover {
+      color: var(--fg);
+    }
+  }
+
+  .site-title,
+  .site-title:visited {
+    color: var(--fg);
+  }
+
+  .site-nav .page-link {
+    color: var(--fg);
+  }
+
+  .post-meta,
+  .footer-col-wrapper {
+    color: var(--fg-soft);
+  }
+
+  .svg-icon {
+    fill: var(--fg-soft);
+  }
+
+  .site-header {
+    border-bottom-color: var(--border);
+  }
+
+  .site-footer {
+    border-top-color: var(--border);
+  }
+
+  blockquote {
+    color: var(--fg-soft);
+    border-left-color: var(--border);
+  }
+
+  table {
+    color: var(--fg);
+    border-color: var(--border);
+
+    tr:nth-child(even) {
+      background-color: #1c2128;
+    }
+
+    th {
+      background-color: #21262d;
+      border-color: var(--border);
+      border-bottom-color: var(--border);
+    }
+
+    td {
+      border-color: var(--border);
+    }
+  }
+
+  // 语法高亮（GitHub Dark 风格）
+  .highlight {
+    .c, .cm, .c1 { color: #8b949e; font-style: italic; }
+    .k, .o, .kc, .kd, .kp, .kr, .ow { color: #ff7b72; font-weight: bold; }
+    .kt, .nc { color: #ff7b72; font-weight: bold; }
+    .m, .mf, .mh, .mi { color: #79c0ff; }
+    .s, .s1, .s2 { color: #a5d6ff; }
+    .na, .nv, .no { color: #79c0ff; }
+    .nb { color: #ffa657; }
+    .nf, .ne { color: #d2a8ff; font-weight: bold; }
+    .nt { color: #7ee787; }
+    .nn { color: #8b949e; }
+    .gh, .gu { color: #8b949e; }
+    .w { color: #8b949e; }
+    .err { color: #f85149; background-color: transparent; }
+  }
+}
+
+// 移动端导航下拉在深色模式下的底色
+@media (prefers-color-scheme: dark) and (max-width: 600px) {
+  .site-nav {
+    background-color: var(--bg-elev);
+    border-color: var(--border);
+  }
+}

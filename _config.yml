@@ -15,9 +15,8 @@ theme: minima
 plugins:
   - jekyll-feed
 
-# minima 主题皮肤（auto 跟随系统深浅色）
-minima:
-  skin: auto
+# 注：minima 2.5.1（Pages 内置版本）不支持 skin 配置；
+# 深浅色模式由 assets/main.scss 中的 prefers-color-scheme 实现。
 
 # 双语发布：_posts/zh/ 与 _posts/en/ 分目录
 # 自动注入语言字段与各自语言的永久链接
