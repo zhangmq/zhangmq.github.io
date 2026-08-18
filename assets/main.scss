@@ -183,7 +183,8 @@ pre {
   }
 }
 
-.highlight {
+.highlight,
+.highlighter-rouge .highlight {
   background: var(--code-bg);
 }
 
@@ -388,6 +389,12 @@ blockquote {
     .gi, .gi .x { color: #b5cea8; }
     .gh, .gu, .gp, .w, .go { color: #9d9d9d; }
     .gr, .gt { color: #f48771; }
+  }
+
+  // 覆盖 minima 硬编码的浅色高亮容器背景
+  .highlight,
+  .highlighter-rouge .highlight {
+    background: var(--code-bg);
   }
 
   @media (max-width: 600px) {
