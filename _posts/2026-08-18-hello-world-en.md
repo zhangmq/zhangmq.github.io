@@ -11,7 +11,7 @@ translation: /zh/2026/08/18/hello-world/
 description: The first post of the blog.
 ---
 
-> 🌐 [阅读中文版](/zh/2026/08/18/hello-world/)
+> [中文](/zh/2026/08/18/hello-world/)
 
 This is the first post of the blog.
 
