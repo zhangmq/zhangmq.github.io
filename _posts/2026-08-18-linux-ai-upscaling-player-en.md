@@ -3,8 +3,11 @@ layout: post
 title: "Real-time AI upscaling in a Linux video player"
 date: 2026-08-18 12:00:00 +0800
 categories: ai
+permalink: /en/2026/08/18/linux-ai-upscaling-player/
 translation: /zh/2026/08/18/linux-ai-upscaling-player/
 ---
+
+> 🌐 [阅读中文版](/zh/2026/08/18/linux-ai-upscaling-player/)
 
 NVIDIA's RTX Video Super Resolution is a great feature — it makes old 720p content look genuinely better. But on Linux it doesn't exist: the driver-level interface behind RTX VSR is Windows-only, and I couldn't find a Linux media player that uses the underlying SDK either. So I had an AI coding agent write one.
 

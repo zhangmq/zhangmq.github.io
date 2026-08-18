@@ -1,37 +1,129 @@
-# 站点配置 —— zhangmq.github.io (GitHub Pages 用户主页)
-# title/description 为语言中立值，供浏览器标签页、RSS、SEO meta 使用；
-# 界面显示文案按语言切换，见 _data/i18n.yml
-title: zhangmq
-email:
-description: >-
-  zhangmq 的个人技术博客 / personal tech blog
-baseurl: "" # 用户主页站点没有子路径
+# The Site Configuration
+
+# Import the theme
+theme: jekyll-theme-chirpy
+
+# 站点语言（Chirpy 内置 zh-CN 界面文案）
+lang: zh-CN
+
+# 时区
+timezone: Asia/Shanghai
+
+# jekyll-seo-tag settings
+title: zhangmq 的博客 # the main title
+tagline: 个人技术博客 # it will display as the subtitle
+description: >- # used by seo meta and the atom feed
+  记录技术折腾、踩坑笔记和一些想法。Tech notes and random stuff.
 url: "https://zhangmq.github.io"
-lang: zh # 站点默认语言
-github_username: zhangmq
 
-# 构建设置
-theme: minima
+github:
+  username: zhangmq
+
+social:
+  name: zhangmq # displayed as default author and copyright owner in Footer
+  links:
+    # The first element serves as the copyright owner's link
+    - https://github.com/zhangmq
+
+# Prefer color scheme setting.
+# Keep empty will follow the system prefer color by default,
+# and there will be a toggle to switch the theme between dark and light
+# on the bottom left of the sidebar.
+# Available options: light | dark
+theme_mode: # [light | dark]
+
+# the avatar on sidebar, support local or CORS resources
+avatar: /assets/img/avatar.svg
+
+# boolean type, the global switch for TOC in posts.
+toc: true
+
+comments:
+  # Global switch for the post-comment system. Keeping it empty means disabled.
+  provider: # [disqus | utterances | giscus]
+
+pwa:
+  enabled: true # The option for PWA feature (installable)
+
+paginate: 10
+
+# The base URL of your site
+baseurl: ""
+
+# ------------ The following options are not recommended to be modified ------------------
+
+# 显式声明主题依赖的插件（与主题 gemspec 一致，确保 Actions 构建加载）
 plugins:
-  - jekyll-feed
+  - jekyll-archives
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
-# 首页列表显示文章摘要（参考 Chirpy 布局）
-show_excerpts: true
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
-# 注：minima 2.5.1（Pages 内置版本）不支持 skin 配置；
-# 深浅色模式由 assets/main.scss 的 data-theme 属性 + prefers-color-scheme 实现，
-# 右上角按钮可手动切换（localStorage 记忆）。
+collections:
+  tabs:
+    output: true
+    sort_by: order
 
-# 双语发布：_posts/zh/ 与 _posts/en/ 分目录
-# 自动注入语言字段与各自语言的永久链接
 defaults:
   - scope:
-      path: "_posts/zh"
+      path: "" # An empty string here means all files in the project
+      type: posts
     values:
-      lang: zh
-      permalink: /zh/:year/:month/:day/:title/
+      layout: post
+      comments: true # Enable comments in posts.
+      toc: true # Display TOC column in posts.
+      permalink: /posts/:title/
   - scope:
-      path: "_posts/en"
+      path: _drafts
     values:
-      lang: en
-      permalink: /en/:year/:month/:day/:title/
+      comments: false
+  - scope:
+      path: ""
+      type: tabs # see `site.collections`
+    values:
+      layout: page
+      permalink: /:title/
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/

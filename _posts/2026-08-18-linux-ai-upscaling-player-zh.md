@@ -3,8 +3,11 @@ layout: post
 title: "Linux 视频播放器里的实时 AI 超分"
 date: 2026-08-18 12:00:00 +0800
 categories: ai
+permalink: /zh/2026/08/18/linux-ai-upscaling-player/
 translation: /en/2026/08/18/linux-ai-upscaling-player/
 ---
+
+> 🌐 [Read in English](/en/2026/08/18/linux-ai-upscaling-player/)
 
 NVIDIA 的 RTX Video Super Resolution 是个好东西——老 720p 内容放出来能明显变清楚。可惜它在 Linux 上不存在：RTX VSR 背后的驱动级接口只开放给 Windows，我也没找到任何用底层 SDK 的 Linux 播放器。所以我就让 AI 编码代理写了一个。
 

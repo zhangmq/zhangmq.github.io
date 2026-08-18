@@ -3,8 +3,11 @@ layout: post
 title: "Hello, World"
 date: 2026-08-18 12:00:00 +0800
 categories: misc
+permalink: /en/2026/08/18/hello-world/
 translation: /zh/2026/08/18/hello-world/
 ---
+
+> 🌐 [阅读中文版](/zh/2026/08/18/hello-world/)
 
 This is the first post of the blog.
 
