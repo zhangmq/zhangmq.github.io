@@ -87,9 +87,11 @@
   <!-- Resource Hints -->
   {% unless site.assets.self_host.enabled %}
     {% for hint in site.data.origin.cors.resource_hints %}
-      {% for link in hint.links %}
-        <link rel="{{ link.rel }}" href="{{ hint.url }}" {{ link.opts | join: ' ' }}>
-      {% endfor %}
+      {% unless hint.url contains 'fonts.googleapis.com' or hint.url contains 'fonts.gstatic.com' %}
+        {% for link in hint.links %}
+          <link rel="{{ link.rel }}" href="{{ hint.url }}" {{ link.opts | join: ' ' }}>
+        {% endfor %}
+      {% endunless %}
     {% endfor %}
   {% endunless %}
 
