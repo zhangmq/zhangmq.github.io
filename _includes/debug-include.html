@@ -1,0 +1,3 @@
+<!-- debug -->
+- G1 include 内 assign+where: `{% assign g1 = site.posts | where: 'lang', 'zh-CN' %}{{ g1 | size }}`
+- G2 include 内 for+where: `{% for post in site.posts | where: 'lang', 'zh-CN' %}{{ post.title }};{% endfor %}`
