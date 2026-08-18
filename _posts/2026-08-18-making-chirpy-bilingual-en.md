@@ -119,7 +119,7 @@ This is the crudest part of the whole setup, and where the most time went.
 | `{% raw %}{% assign x = arr \| where: ... %}{% endraw %}` (inside an include) | ✅ works |
 | `{% raw %}{% for x in arr %}{% if x.lang == ... %}{% endraw %}` (plain control flow) | ✅ works |
 
-Conclusion (tested on Jekyll 4.4.1 + Liquid 4.0.4): **filters in `{% for %}` collection position are silently ignored** — no error, no warning, just the unfiltered array. A silent no-op is harder to debug than an explicit error.
+Conclusion (tested on Jekyll 4.4.1 + Liquid 4.0.4): **filters in `{% raw %}{% for %}{% endraw %}` collection position are silently ignored** — no error, no warning, just the unfiltered array. A silent no-op is harder to debug than an explicit error.
 
 **The rule we now follow everywhere:**
 
