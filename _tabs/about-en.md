@@ -10,4 +10,4 @@ This is zhangmq's personal blog, hosted on GitHub Pages and built with Jekyll + 
 
 Mostly tech notes, pitfalls, and random thoughts. Some posts have a Chinese version, linked at the top of the post.
 
-Code: [github.com/zhangmq/vsr-player](https://github.com/zhangmq/vsr-player) (GPLv2+).
+GitHub: [github.com/zhangmq](https://github.com/zhangmq)

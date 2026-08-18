@@ -9,4 +9,4 @@ lang: zh-CN
 
 主要记录技术折腾、踩坑笔记和一些想法。部分文章提供英文版本，文章开头有中英互链。
 
-代码仓库：[github.com/zhangmq/vsr-player](https://github.com/zhangmq/vsr-player)（GPLv2+）。
+GitHub：[github.com/zhangmq](https://github.com/zhangmq)
