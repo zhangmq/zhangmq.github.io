@@ -114,16 +114,17 @@ This is the crudest part of the whole setup, and where the most time went.
 
 | Construct | Result |
 |---|---|
-| `{% for x in arr \| where: ... %}` | ❌ **no-op** — returns the whole array |
-| `{% assign x = arr \| where: ... %}` (top level) | ✅ works |
-| `{% assign x = arr \| where: ... %}` (inside an include) | ✅ works |
-| `{% for x in arr %}{% if x.lang == ... %}` (plain control flow) | ✅ works |
+| `{% raw %}{% for x in arr \| where: ... %}{% endraw %}` | ❌ **no-op** — returns the whole array |
+| `{% raw %}{% assign x = arr \| where: ... %}{% endraw %}` (top level) | ✅ works |
+| `{% raw %}{% assign x = arr \| where: ... %}{% endraw %}` (inside an include) | ✅ works |
+| `{% raw %}{% for x in arr %}{% if x.lang == ... %}{% endraw %}` (plain control flow) | ✅ works |
 
 Conclusion (tested on Jekyll 4.4.1 + Liquid 4.0.4): **filters in `{% for %}` collection position are silently ignored** — no error, no warning, just the unfiltered array. A silent no-op is harder to debug than an explicit error.
 
 **The rule we now follow everywhere:**
 
 ```liquid
+{% raw %}
 {%- comment -%} ✅ correct: filter in a top-level assign {%- endcomment -%}
 {% assign lang_posts = site.posts | where: 'lang', 'zh-CN' %}
 {% for post in lang_posts %}...{% endfor %}
@@ -135,6 +136,7 @@ Conclusion (tested on Jekyll 4.4.1 + Liquid 4.0.4): **filters in `{% for %}` col
 
 {%- comment -%} ❌ wrong: filter in for collection position {%- endcomment -%}
 {% for post in site.posts | where: 'lang', 'zh-CN' %}...{% endfor %}
+{% endraw %}
 ```
 
 ## 5. Archive detail pages: forking jekyll-archives

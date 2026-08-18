@@ -113,16 +113,17 @@ translation: /zh/2026/08/18/slug/
 
 | 写法 | 实测结果 |
 |---|---|
-| `{% for x in arr \| where: ... %}` | ❌ **不生效**，返回全部元素 |
-| `{% assign x = arr \| where: ... %}`（顶层） | ✅ 生效 |
-| `{% assign x = arr \| where: ... %}`（include 内） | ✅ 生效 |
-| `{% for x in arr %}{% if x.lang == ... %}`（纯控制流） | ✅ 生效 |
+| `{% raw %}{% for x in arr \| where: ... %}{% endraw %}` | ❌ **不生效**，返回全部元素 |
+| `{% raw %}{% assign x = arr \| where: ... %}{% endraw %}`（顶层） | ✅ 生效 |
+| `{% raw %}{% assign x = arr \| where: ... %}{% endraw %}`（include 内） | ✅ 生效 |
+| `{% raw %}{% for x in arr %}{% if x.lang == ... %}{% endraw %}`（纯控制流） | ✅ 生效 |
 
 结论（Jekyll 4.4.1 + Liquid 4.0.4 实测）：**`{% for %}` 集合位置的过滤器被静默忽略**，不报错、不警告，直接返回未过滤的集合——静默失败比直接报错更难排查。
 
 **规避铁律**（现在全站遵守）：
 
 ```liquid
+{% raw %}
 {%- comment -%} ✅ 正确：assign 顶层过滤 {%- endcomment -%}
 {% assign lang_posts = site.posts | where: 'lang', 'zh-CN' %}
 {% for post in lang_posts %}...{% endfor %}
@@ -134,6 +135,7 @@ translation: /zh/2026/08/18/slug/
 
 {%- comment -%} ❌ 错误：for 集合位置用过滤器 {%- endcomment -%}
 {% for post in site.posts | where: 'lang', 'zh-CN' %}...{% endfor %}
+{% endraw %}
 ```
 
 ## 5. 归档详情页：fork jekyll-archives
