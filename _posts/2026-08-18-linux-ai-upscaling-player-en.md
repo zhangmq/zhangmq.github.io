@@ -5,6 +5,7 @@ hidden: true
 title: "Real-time AI upscaling in a Linux video player"
 date: 2026-08-18 12:00:00 +0800
 categories: ai
+tags: [mpv, cuda, tensorrt, rife]
 permalink: /en/2026/08/18/linux-ai-upscaling-player/
 translation: /zh/2026/08/18/linux-ai-upscaling-player/
 description: How VFX super-resolution and RIFE frame interpolation are wired into a Linux mpv player, and how the whole pipeline moved onto the GPU.

@@ -4,6 +4,7 @@ lang: zh-CN
 title: "你好，世界"
 date: 2026-08-18 12:00:00 +0800
 categories: misc
+tags: [blog]
 permalink: /zh/2026/08/18/hello-world/
 translation: /en/2026/08/18/hello-world/
 description: 博客的第一篇文章。

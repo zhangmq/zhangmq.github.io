@@ -2,6 +2,7 @@
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 4
+lang: zh-CN
 ---
 
 这里是 zhangmq 的个人博客，托管在 GitHub Pages 上，由 Jekyll + Chirpy 主题构建。

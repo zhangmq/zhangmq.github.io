@@ -5,6 +5,7 @@ hidden: true
 title: "Hello, World"
 date: 2026-08-18 12:00:00 +0800
 categories: misc
+tags: [blog]
 permalink: /en/2026/08/18/hello-world/
 translation: /zh/2026/08/18/hello-world/
 description: The first post of the blog.

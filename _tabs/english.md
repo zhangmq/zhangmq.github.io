@@ -5,4 +5,5 @@ order: 0
 permalink: /en/
 lang: en
 layout: english
+cross_lang: true
 ---

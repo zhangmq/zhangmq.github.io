@@ -4,6 +4,7 @@ lang: zh-CN
 title: "Linux 视频播放器里的实时 AI 超分"
 date: 2026-08-18 12:00:00 +0800
 categories: ai
+tags: [mpv, cuda, tensorrt, rife]
 permalink: /zh/2026/08/18/linux-ai-upscaling-player/
 translation: /en/2026/08/18/linux-ai-upscaling-player/
 description: VFX 超分和 RIFE 插帧是怎么接进 Linux 播放器的，整条管线又是怎么搬到 GPU 上的。

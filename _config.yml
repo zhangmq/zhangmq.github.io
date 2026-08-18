@@ -10,8 +10,8 @@ lang: zh-CN
 timezone: Asia/Shanghai
 
 # jekyll-seo-tag settings
-title: zhangmq 的博客 # the main title
-tagline: 个人技术博客 # it will display as the subtitle
+title: zhangmq's Blog # the main title
+tagline: Personal tech blog # it will display as the subtitle
 description: >- # used by seo meta and the atom feed
   记录技术折腾、踩坑笔记和一些想法。Tech notes and random stuff.
 url: "https://zhangmq.github.io"
