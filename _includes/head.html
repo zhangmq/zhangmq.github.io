@@ -87,11 +87,9 @@
   <!-- Resource Hints -->
   {% unless site.assets.self_host.enabled %}
     {% for hint in site.data.origin.cors.resource_hints %}
-      {% unless hint.url contains 'fonts.googleapis.com' or hint.url contains 'fonts.gstatic.com' %}
-        {% for link in hint.links %}
-          <link rel="{{ link.rel }}" href="{{ hint.url }}" {{ link.opts | join: ' ' }}>
-        {% endfor %}
-      {% endunless %}
+      {% for link in hint.links %}
+        <link rel="{{ link.rel }}" href="{{ hint.url }}" {{ link.opts | join: ' ' }}>
+      {% endfor %}
     {% endfor %}
   {% endunless %}
 
@@ -102,6 +100,9 @@
 
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ '/assets/css/:THEME.css' | replace: ':THEME', site.theme | relative_url }}">
+
+  <!-- Web Font -->
+  <link rel="stylesheet" href="{{ site.data.origin[type].webfonts | relative_url }}">
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ site.data.origin[type].fontawesome.css | relative_url }}">
