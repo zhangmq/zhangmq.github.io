@@ -15,9 +15,12 @@ description: The first post of the blog.
 
 This is the first post of the blog.
 
-Writing with Jekyll is simple: drop a `YYYY-MM-DD-title.md` file into `_posts/en/`,
-start it with a YAML front matter block (title, date, ...), and write the body in Markdown.
-GitHub Pages rebuilds the site automatically on push.
+Writing with Jekyll is simple: add a `YYYY-MM-DD-title-zh.md` (Chinese) or `-en.md` (English)
+file to `_posts/`, start it with YAML front matter (title, date, language, categories, tags,
+permalink, translation), and write the body in Markdown. GitHub Actions rebuilds the site on push.
 
-This site keeps the Chinese version under `_posts/zh/`; both posts link to each other
-via the `translation` front matter field.
+Bilingual conventions on this site:
+
+- Chinese posts: `lang: zh-CN`, `permalink: /zh/2026/08/18/title/`, with an `[English](...)` link at the top
+- English posts: `lang: en`, `hidden: true` (kept off the Chinese home page), `permalink: /en/2026/08/18/title/`
+- The pair links to each other via the `translation` front matter field.

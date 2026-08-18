@@ -14,8 +14,12 @@ description: 博客的第一篇文章。
 
 这是博客的第一篇文章。
 
-用 Jekyll 写博客很简单：在 `_posts/zh/` 目录下新建一个 `YYYY-MM-DD-标题.md` 文件，
-开头写一段 YAML 头信息（标题、日期等），正文直接用 Markdown 写。
-推送到 GitHub 后，Pages 会自动构建发布。
+用 Jekyll 写博客很简单：在 `_posts/` 下新建 `YYYY-MM-DD-标题-zh.md`（中文）或 `-en.md`（英文），
+开头写一段 YAML 头信息（标题、日期、语言、分类、标签、permalink、translation），正文直接用 Markdown 写。
+推送到 GitHub 后，Actions 会自动构建发布。
 
-本站在 `_posts/en/` 下维护对应的英文版本，两篇文章通过 `translation` 字段互相链接。
+本站的双语约定：
+
+- 中文篇：`lang: zh-CN`，`permalink: /zh/2026/08/18/标题/`，正文顶部放 `[English](...)` 链接
+- 英文篇：`lang: en`、`hidden: true`（不进中文首页），`permalink: /en/2026/08/18/标题/`
+- 两篇通过 `translation` 字段互相链接
