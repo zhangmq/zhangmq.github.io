@@ -33,3 +33,4 @@ Thumbs.db
 
 # 本地推送凭据助手（沙箱环境专用，勿提交）
 .git-gh-helper.sh
+.fork-work/

@@ -5,6 +5,11 @@ layout: page
 
 {% include lang.html %}
 
+{% assign _lang_prefix = "" %}
+{% if lang != site.lang %}
+  {% assign _lang_prefix = "/" | append: lang %}
+{% endif %}
+
 <div id="tags" class="d-flex flex-wrap mx-xl-2">
   {% assign lang_posts = site.posts | where: 'lang', lang %}
   {% assign tag_list = '' | split: '' %}
@@ -18,8 +23,9 @@ layout: page
   {% assign sorted_tags = tag_list | uniq | sort_natural %}
 
   {% for t in sorted_tags %}
+    {% assign _tag_slug = t | slugify | url_encode %}
     <div>
-      <a class="tag" href="{{ t | slugify | url_encode | prepend: '/tags/' | append: '/' | relative_url }}">
+      <a class="tag" href="{{ _lang_prefix | append: '/tags/' | append: _tag_slug | append: '/' | relative_url }}">
         {{ t -}}
         <span class="text-muted">{{ lang_posts | where_exp: 'post', 'post.tags contains t' | size }}</span>
       </a>
