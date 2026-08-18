@@ -1,0 +1,20 @@
+# 站点配置 —— zhangmq.github.io (GitHub Pages 用户主页)
+title: zhangmq 的博客
+email:
+description: >-
+  个人技术博客，记录折腾过的各种东西。
+baseurl: "" # 用户主页站点没有子路径
+url: "https://zhangmq.github.io"
+github_username: zhangmq
+
+# 构建设置
+theme: minima
+plugins:
+  - jekyll-feed
+
+# minima 主题皮肤（auto 跟随系统深浅色）
+minima:
+  skin: auto
+  social_links:
+    - platform: github
+      user_url: https://github.com/zhangmq
