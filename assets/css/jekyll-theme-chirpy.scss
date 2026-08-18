@@ -29,3 +29,10 @@
 #tags .tag span {
   font-family: inherit;
 }
+
+/* 首页/相关文章卡片标题：Chirpy 的 -webkit-line-clamp:2 裁切框按 line-height 计算，
+   系统字体（SF/Segoe/Roboto）下行部（g/y/p）超出 1.2em 会被 overflow:hidden 裁掉，放宽行高 */
+#post-list .card .card-body .card-title,
+#related-posts .card h4 {
+  line-height: 1.45;
+}
