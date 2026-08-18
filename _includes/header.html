@@ -22,6 +22,9 @@
             <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
           {%- endfor -%}
           <a class="page-link" href="{{ t.other_home | relative_url }}">{{ t.switch_lang | escape }}</a>
+          <button type="button" class="theme-toggle" id="theme-toggle"
+                  data-to-dark="{{ t.theme_dark }}" data-to-light="{{ t.theme_light }}"
+                  aria-label="{{ t.theme_toggle_aria }}"></button>
         </div>
       </nav>
     {%- endif -%}

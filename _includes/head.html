@@ -5,6 +5,59 @@
   {%- assign lang = page.lang | default: site.lang -%}
   {%- assign t = site.data.i18n[lang] -%}
   <title>{% if page.title %}{{ page.title | escape }} | {{ t.site_title | escape }}{% else %}{{ t.site_title | escape }}{% endif %}</title>
+  <script>
+    /* 主题初始化：在 CSS 生效前设置 data-theme，避免闪烁 */
+    (function () {
+      var KEY = "theme";
+      function stored() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+      function systemDark() {
+        return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      }
+      function current() {
+        var s = stored();
+        if (s === "dark" || s === "light") return s;
+        return systemDark() ? "dark" : "light";
+      }
+      function apply(t) { document.documentElement.setAttribute("data-theme", t); }
+      function renderButton() {
+        var b = document.getElementById("theme-toggle");
+        if (!b) return;
+        var dark = document.documentElement.getAttribute("data-theme") === "dark";
+        b.innerHTML = dark ? b.getAttribute("data-to-light") : b.getAttribute("data-to-dark");
+      }
+      apply(current());
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var b = document.getElementById("theme-toggle");
+        if (b) {
+          b.addEventListener("click", function () {
+            var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+            try { localStorage.setItem(KEY, next); } catch (e) {}
+            apply(next);
+            renderButton();
+          });
+        }
+        /* 未手动指定时跟随系统切换 */
+        if (window.matchMedia) {
+          var mq = window.matchMedia("(prefers-color-scheme: dark)");
+          var fn = function (e) { if (!stored()) { apply(e.matches ? "dark" : "light"); renderButton(); } };
+          if (mq.addEventListener) mq.addEventListener("change", fn);
+          else if (mq.addListener) mq.addListener(fn);
+        }
+        /* 返回顶部 */
+        var topBtn = document.getElementById("back-to-top");
+        if (topBtn) {
+          window.addEventListener("scroll", function () {
+            topBtn.classList.toggle("visible", window.scrollY > 400);
+          }, { passive: true });
+          topBtn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+        }
+        renderButton();
+      });
+    })();
+  </script>
   {%- seo title=false -%}
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   {%- feed_meta -%}

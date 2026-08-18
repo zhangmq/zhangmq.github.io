@@ -15,8 +15,12 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# 首页列表显示文章摘要（参考 Chirpy 布局）
+show_excerpts: true
+
 # 注：minima 2.5.1（Pages 内置版本）不支持 skin 配置；
-# 深浅色模式由 assets/main.scss 中的 prefers-color-scheme 实现。
+# 深浅色模式由 assets/main.scss 的 data-theme 属性 + prefers-color-scheme 实现，
+# 右上角按钮可手动切换（localStorage 记忆）。
 
 # 双语发布：_posts/zh/ 与 _posts/en/ 分目录
 # 自动注入语言字段与各自语言的永久链接
