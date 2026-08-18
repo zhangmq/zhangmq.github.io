@@ -5,6 +5,7 @@ description: >-
   个人技术博客，记录折腾过的各种东西。
 baseurl: "" # 用户主页站点没有子路径
 url: "https://zhangmq.github.io"
+lang: zh # 站点默认语言
 github_username: zhangmq
 
 # 构建设置
@@ -18,3 +19,17 @@ minima:
   social_links:
     - platform: github
       user_url: https://github.com/zhangmq
+
+# 双语发布：_posts/zh/ 与 _posts/en/ 分目录
+# 自动注入语言字段与各自语言的永久链接
+defaults:
+  - scope:
+      path: "_posts/zh"
+    values:
+      lang: zh
+      permalink: /zh/:year/:month/:day/:title/
+  - scope:
+      path: "_posts/en"
+    values:
+      lang: en
+      permalink: /en/:year/:month/:day/:title/
