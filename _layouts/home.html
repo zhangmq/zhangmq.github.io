@@ -9,10 +9,11 @@ layout: default
 
   {{ content }}
 
-  {%- assign lang = page.lang | default: "zh" -%}
+  {%- assign lang = page.lang | default: site.lang -%}
+  {%- assign t = site.data.i18n[lang] -%}
   {%- assign posts = site.posts | where: "lang", lang -%}
   {%- if posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <h2 class="post-list-heading">{{ t.list_title }}</h2>
     <ul class="post-list">
       {%- for post in posts -%}
       <li>
@@ -30,7 +31,7 @@ layout: default
       {%- endfor -%}
     </ul>
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+    <p class="rss-subscribe"><a href="{{ "/feed.xml" | relative_url }}">{{ t.subscribe }}</a></p>
   {%- endif -%}
 
 </div>

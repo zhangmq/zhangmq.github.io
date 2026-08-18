@@ -3,6 +3,9 @@ permalink: /404.html
 layout: default
 ---
 
+{%- assign lang = page.lang | default: site.lang -%}
+{%- assign t = site.data.i18n[lang] -%}
+
 <style type="text/css" media="screen">
   .container-404 {
     margin: 10px auto;
@@ -20,6 +23,6 @@ layout: default
 <div class="container-404">
   <h1>404</h1>
 
-  <p><strong>页面不存在 :(</strong></p>
-  <p>访问的地址可能已经移动或写错了。</p>
+  <p><strong>{{ t.not_found_heading }}</strong></p>
+  <p>{{ t.not_found_text }}</p>
 </div>

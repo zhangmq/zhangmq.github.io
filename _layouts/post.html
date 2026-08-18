@@ -15,13 +15,11 @@ layout: default
       {%- endif -%}</p>
   </header>
 
+  {%- assign lang = page.lang | default: site.lang -%}
+  {%- assign t = site.data.i18n[lang] -%}
   {%- if page.translation -%}
     <p class="post-translation">
-      {%- if page.lang == "en" -%}
-        <a href="{{ page.translation | relative_url }}">🌐 阅读中文版</a>
-      {%- else -%}
-        <a href="{{ page.translation | relative_url }}">🌐 Read in English</a>
-      {%- endif -%}
+      <a href="{{ page.translation | relative_url }}">🌐 {{ t.read_other }}</a>
     </p>
   {%- endif -%}
 

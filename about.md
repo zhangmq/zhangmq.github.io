@@ -2,6 +2,8 @@
 layout: page
 title: 关于
 permalink: /about/
+lang: zh
+nav_order: 20
 ---
 
 这里是 zhangmq 的个人博客，托管在 GitHub Pages 上，由 Jekyll 构建。

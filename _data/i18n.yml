@@ -1,0 +1,22 @@
+# 界面文案（按页面语言切换；无 lang 的页面回退 site.lang）
+zh:
+  site_title: zhangmq 的博客
+  description: 个人技术博客，记录折腾过的各种东西。
+  list_title: 文章列表
+  subscribe: 通过 RSS 订阅
+  read_other: Read in English
+  switch_lang: English
+  other_home: /en/
+  not_found_heading: 页面不存在 :(
+  not_found_text: 访问的地址可能已经移动或写错了。
+
+en:
+  site_title: zhangmq's Blog
+  description: Tech notes and random stuff.
+  list_title: Posts
+  subscribe: Subscribe via RSS
+  read_other: 阅读中文版
+  switch_lang: 中文
+  other_home: /
+  not_found_heading: Page not found :(
+  not_found_text: The requested URL may have moved or was mistyped.
