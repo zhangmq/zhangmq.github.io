@@ -13,19 +13,31 @@
 
 {% assign match_posts = '' | split: '' %}
 
-{% for category in page.categories %}
-  {% assign match_posts = match_posts
-    | concat: site.categories[category]
-    | where: 'lang', include.lang
-    | uniq %}
+{% for cat_entry in site.categories %}
+  {% assign cat_name = cat_entry | first %}
+  {% if page.categories contains cat_name %}
+    {% assign cat_posts = cat_entry | last %}
+    {% for cp in cat_posts %}
+      {% if cp.lang == include.lang %}
+        {% assign match_posts = match_posts | push: cp %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 {% endfor %}
 
-{% for tag in page.tags %}
-  {% assign match_posts = match_posts
-    | concat: site.tags[tag]
-    | where: 'lang', include.lang
-    | uniq %}
+{% for tag_entry in site.tags %}
+  {% assign tag_name = tag_entry | first %}
+  {% if page.tags contains tag_name %}
+    {% assign tag_posts = tag_entry | last %}
+    {% for tp in tag_posts %}
+      {% if tp.lang == include.lang %}
+        {% assign match_posts = match_posts | push: tp %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 {% endfor %}
+
+{% assign match_posts = match_posts | uniq %}
 
 {% assign match_posts = match_posts | reverse %}
 {% assign last_index = match_posts.size | minus: 1 %}

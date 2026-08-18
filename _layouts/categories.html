@@ -19,7 +19,13 @@ layout: page
 
 {% for category in sort_categories %}
   {% assign category_name = category | first %}
-  {% assign posts_of_category = category | last | where: 'lang', lang %}
+  {% assign all_posts = category | last %}
+  {% assign posts_of_category = '' | split: '' %}
+  {% for cp in all_posts %}
+    {% if cp.lang == lang %}
+      {% assign posts_of_category = posts_of_category | push: cp %}
+    {% endif %}
+  {% endfor %}
   {% if posts_of_category.size == 0 %}
     {% continue %}
   {% endif %}
@@ -117,7 +123,12 @@ layout: page
                 {% capture _sub_ctg_url %}{{ _lang_prefix }}/categories/{{ sub_category | slugify | url_encode }}/{% endcapture %}
                 <a href="{{ _sub_ctg_url | relative_url }}" class="mx-2">{{ sub_category }}</a>
 
-                {% assign posts_size = posts_of_category | where_exp: 'post', 'post.categories contains sub_category' | size %}
+                {% assign posts_size = 0 %}
+                {% for p in posts_of_category %}
+                  {% if p.categories contains sub_category %}
+                    {% assign posts_size = posts_size | plus: 1 %}
+                  {% endif %}
+                {% endfor %}
                 <span class="text-muted small font-weight-light">
                   {{ posts_size }}
 

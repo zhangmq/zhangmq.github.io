@@ -24,10 +24,16 @@ layout: page
 
   {% for t in sorted_tags %}
     {% assign _tag_slug = t | slugify | url_encode %}
+    {% assign _cnt = 0 %}
+    {% for p in lang_posts %}
+      {% if p.tags contains t %}
+        {% assign _cnt = _cnt | plus: 1 %}
+      {% endif %}
+    {% endfor %}
     <div>
       <a class="tag" href="{{ _lang_prefix | append: '/tags/' | append: _tag_slug | append: '/' | relative_url }}">
         {{ t -}}
-        <span class="text-muted">{{ lang_posts | where_exp: 'post', 'post.tags contains t' | size }}</span>
+        <span class="text-muted">{{ _cnt }}</span>
       </a>
     </div>
   {% endfor %}

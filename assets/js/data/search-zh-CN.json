@@ -3,8 +3,10 @@ layout: compress
 swcache: true
 ---
 
+{% assign lang_posts = site.posts | where: 'lang', 'zh-CN' %}
+
 [
-  {% for post in site.posts | where: 'lang', 'zh-CN' %}
+  {% for post in lang_posts %}
   {
     "title": {{ post.title | jsonify }},
     "url": {{ post.url | relative_url | jsonify }},

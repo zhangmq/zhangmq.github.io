@@ -4,18 +4,20 @@
   {% assign previous = site.data.locales[include.lang].post.button.previous %}
   {% assign next = site.data.locales[include.lang].post.button.next %}
 
-  {% assign lang_posts = site.posts | where: 'lang', include.lang %}
   {% assign prev_post = nil %}
   {% assign next_post = nil %}
+  {% assign found = false %}
 
-  {% for p in lang_posts %}
-    {% if p.url == page.url %}
-      {% unless forloop.first %}
-        {% assign prev_post = lang_posts[forloop.index0 | minus: 1] %}
-      {% endunless %}
-      {% unless forloop.last %}
-        {% assign next_post = lang_posts[forloop.index0 | plus: 1] %}
-      {% endunless %}
+  {% for p in site.posts %}
+    {% if p.lang == include.lang %}
+      {% if found == true %}
+        {% assign next_post = p %}
+        {% break %}
+      {% elsif p.url == page.url %}
+        {% assign found = true %}
+      {% else %}
+        {% assign prev_post = p %}
+      {% endif %}
     {% endif %}
   {% endfor %}
 
