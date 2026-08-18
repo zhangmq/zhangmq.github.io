@@ -10,7 +10,7 @@ translation: /en/2026/08/18/hello-world/
 description: 博客的第一篇文章。
 ---
 
-> [English](/en/2026/08/18/hello-world/)
+[English](/en/2026/08/18/hello-world/)
 
 这是博客的第一篇文章。
 

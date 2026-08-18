@@ -34,12 +34,16 @@
       {% for tab in site.tabs %}
         {% if tab.lang == include.lang or tab.cross_lang %}
           <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
-            <a href="{{ tab.url | relative_url }}" class="nav-link">
+            {% if tab.cross_lang and include.lang != site.lang %}
+              <!-- 英文界面：语言切换入口指向中文首页 -->
+              <a href="{{ '/' | relative_url }}" class="nav-link">
+            {% else %}
+              <a href="{{ tab.url | relative_url }}" class="nav-link">
+            {% endif %}
               <i class="fa-fw {{ tab.icon }}"></i>
               {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
 
               {% if tab.cross_lang and include.lang != site.lang %}
-                <!-- 英文界面下，语言切换入口显示「中文」 -->
                 <span>中文</span>
               {% else %}
                 <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>

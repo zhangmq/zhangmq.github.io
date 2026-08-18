@@ -11,7 +11,7 @@ translation: /zh/2026/08/18/linux-ai-upscaling-player/
 description: How VFX super-resolution and RIFE frame interpolation are wired into a Linux mpv player, and how the whole pipeline moved onto the GPU.
 ---
 
-> [中文](/zh/2026/08/18/linux-ai-upscaling-player/)
+[中文](/zh/2026/08/18/linux-ai-upscaling-player/)
 
 NVIDIA's RTX Video Super Resolution is a great feature — it makes old 720p content look genuinely better. But on Linux it doesn't exist: the driver-level interface behind RTX VSR is Windows-only, and I couldn't find a Linux media player that uses the underlying SDK either. So I had an AI coding agent write one.
 
