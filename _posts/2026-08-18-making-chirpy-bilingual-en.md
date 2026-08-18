@@ -2,7 +2,7 @@
 layout: post
 lang: en
 hidden: true
-title: "Making Chirpy bilingual the crude way"
+title: "Making Chirpy bilingual the quick and dirty way"
 date: 2026-08-18 12:00:00 +0800
 categories: tech
 tags: [jekyll, chirpy, i18n, github-pages]
@@ -15,7 +15,7 @@ description: Making Chirpy support Chinese/English article pairs with theme over
 
 Chirpy is a popular Jekyll theme for GitHub Pages. Its i18n support, however, only covers the *UI strings* (`_data/locales/` — buttons, labels, date formats). It does not solve the *content layer*: how a Chinese post and its English translation pair up, own separate URLs, and stay separated by language across every listing.
 
-This post documents how I built that content layer the crude way — no full theme fork, no SSG switch, no second site. Just **site-level theme overrides plus one forked plugin**. Every pitfall below is real, and the Liquid one gets its own section.
+This post documents how I built that content layer the quick and dirty way — no full theme fork, no SSG switch, no second site. Just **site-level theme overrides plus one forked plugin**. Every pitfall below is real, and the Liquid one gets its own section.
 
 ## 0. The single-language reality of stock Chirpy
 
@@ -106,7 +106,7 @@ The override list (all site-level overrides; the theme itself stays untouched):
 
 ## 4. The big one: Liquid filters in `for` collection position silently no-op
 
-This is the crudest part of the whole setup, and where the most time went.
+This is the part where the quick-and-dirty nature of the whole setup really shows, and where the most time went.
 
 **Symptom:** half of the language-filtered templates worked and half didn't — "Recently Updated" filtered correctly, the archives page listed every post in both languages, and both search index files were byte-identical (same md5).
 
