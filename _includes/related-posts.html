@@ -15,14 +15,14 @@
 
 {% for category in page.categories %}
   {% assign match_posts = match_posts
-    | push: site.categories[category]
+    | concat: site.categories[category]
     | where: 'lang', include.lang
     | uniq %}
 {% endfor %}
 
 {% for tag in page.tags %}
   {% assign match_posts = match_posts
-    | push: site.tags[tag]
+    | concat: site.tags[tag]
     | where: 'lang', include.lang
     | uniq %}
 {% endfor %}

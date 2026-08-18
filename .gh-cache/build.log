@@ -1,0 +1,644 @@
+﻿2026-08-18T13:01:40.6870728Z Current runner version: '2.336.0'
+2026-08-18T13:01:40.6895431Z ##[group]Runner Image Provisioner
+2026-08-18T13:01:40.6896271Z Hosted Compute Agent
+2026-08-18T13:01:40.6896802Z Version: 20260729.566
+2026-08-18T13:01:40.6897371Z Commit: cf7153fe6e25b664e8693c24944bf2b00355d109
+2026-08-18T13:01:40.6898062Z Build Date: 2026-07-29T19:17:02Z
+2026-08-18T13:01:40.6898703Z Worker ID: {6f58caf1-110a-45ab-969a-8cb8577cee7e}
+2026-08-18T13:01:40.6899338Z Azure Region: westus3
+2026-08-18T13:01:40.6899885Z ##[endgroup]
+2026-08-18T13:01:40.6901179Z ##[group]Operating System
+2026-08-18T13:01:40.6901775Z Ubuntu
+2026-08-18T13:01:40.6902278Z 24.04.4
+2026-08-18T13:01:40.6902905Z LTS
+2026-08-18T13:01:40.6903407Z ##[endgroup]
+2026-08-18T13:01:40.6903892Z ##[group]Runner Image
+2026-08-18T13:01:40.6904404Z Image: ubuntu-24.04
+2026-08-18T13:01:40.6904963Z Version: 20260810.271.1
+2026-08-18T13:01:40.6906059Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260810.271/images/ubuntu/Ubuntu2404-Readme.md
+2026-08-18T13:01:40.6907464Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260810.271
+2026-08-18T13:01:40.6908259Z ##[endgroup]
+2026-08-18T13:01:40.6909698Z ##[group]GITHUB_TOKEN Permissions
+2026-08-18T13:01:40.6911856Z Contents: read
+2026-08-18T13:01:40.6912623Z Metadata: read
+2026-08-18T13:01:40.6913132Z Pages: write
+2026-08-18T13:01:40.6913646Z ##[endgroup]
+2026-08-18T13:01:40.6915729Z Secret source: Actions
+2026-08-18T13:01:40.6916632Z Prepare workflow directory
+2026-08-18T13:01:40.7232322Z Prepare all required actions
+2026-08-18T13:01:40.7281859Z Getting action download info
+2026-08-18T13:01:41.0908207Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-08-18T13:01:41.2212178Z Download action repository 'actions/configure-pages@v6' (SHA:45bfe0192ca1faeb007ade9deae92b16b8254a0d)
+2026-08-18T13:01:41.9149360Z Download action repository 'ruby/setup-ruby@v1' (SHA:95ef2b042f9d7a56d8268cba8559e2842e2ad01b)
+2026-08-18T13:01:42.5031692Z Download action repository 'actions/upload-pages-artifact@v5' (SHA:fc324d3547104276b827a68afc52ff2a11cc49c9)
+2026-08-18T13:01:42.8725860Z Getting action download info
+2026-08-18T13:01:42.9809601Z Download action repository 'actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f' (SHA:bbbca2ddaa5d8feaa63e36b76fdaad77386f024f)
+2026-08-18T13:01:43.1182423Z Complete job name: build
+2026-08-18T13:01:43.1939737Z ##[group]Run actions/checkout@v7
+2026-08-18T13:01:43.1940333Z with:
+2026-08-18T13:01:43.1940599Z   fetch-depth: 0
+2026-08-18T13:01:43.1940908Z   repository: zhangmq/zhangmq.github.io
+2026-08-18T13:01:43.1944083Z   token: ***
+2026-08-18T13:01:43.1944329Z   ssh-strict: true
+2026-08-18T13:01:43.1944580Z   ssh-user: git
+2026-08-18T13:01:43.1944843Z   persist-credentials: true
+2026-08-18T13:01:43.1945132Z   clean: true
+2026-08-18T13:01:43.1945413Z   sparse-checkout-cone-mode: true
+2026-08-18T13:01:43.1945721Z   fetch-tags: false
+2026-08-18T13:01:43.1945975Z   show-progress: true
+2026-08-18T13:01:43.1946258Z   lfs: false
+2026-08-18T13:01:43.1946496Z   submodules: false
+2026-08-18T13:01:43.1946768Z   set-safe-directory: true
+2026-08-18T13:01:43.1947070Z   allow-unsafe-pr-checkout: false
+2026-08-18T13:01:43.1947588Z ##[endgroup]
+2026-08-18T13:01:43.2980899Z Syncing repository: zhangmq/zhangmq.github.io
+2026-08-18T13:01:43.2982368Z ##[group]Getting Git version info
+2026-08-18T13:01:43.2983437Z Working directory is '/home/runner/work/zhangmq.github.io/zhangmq.github.io'
+2026-08-18T13:01:43.2984284Z [command]/usr/bin/git version
+2026-08-18T13:01:43.3030913Z git version 2.54.0
+2026-08-18T13:01:43.3050079Z ##[endgroup]
+2026-08-18T13:01:43.3062607Z Temporarily overriding HOME='/home/runner/work/_temp/a3abc073-bb5c-40ef-b16e-b7b0a2ba003a' before making global git config changes
+2026-08-18T13:01:43.3064085Z Adding repository directory to the temporary git global config as a safe directory
+2026-08-18T13:01:43.3070438Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/zhangmq.github.io/zhangmq.github.io
+2026-08-18T13:01:43.3113229Z Deleting the contents of '/home/runner/work/zhangmq.github.io/zhangmq.github.io'
+2026-08-18T13:01:43.3116386Z ##[group]Determining repository object format
+2026-08-18T13:01:43.3118032Z ##[endgroup]
+2026-08-18T13:01:43.3118839Z ##[group]Initializing the repository
+2026-08-18T13:01:43.3124442Z [command]/usr/bin/git init /home/runner/work/zhangmq.github.io/zhangmq.github.io
+2026-08-18T13:01:43.3213251Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-08-18T13:01:43.3214194Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-08-18T13:01:43.3214740Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-08-18T13:01:43.3215253Z hint: call:
+2026-08-18T13:01:43.3215553Z hint:
+2026-08-18T13:01:43.3216093Z hint: 	git config --global init.defaultBranch <name>
+2026-08-18T13:01:43.3216534Z hint:
+2026-08-18T13:01:43.3216870Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-08-18T13:01:43.3217442Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-08-18T13:01:43.3217845Z hint:
+2026-08-18T13:01:43.3218093Z hint: 	git branch -m <name>
+2026-08-18T13:01:43.3218353Z hint:
+2026-08-18T13:01:43.3218713Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-08-18T13:01:43.3225218Z Initialized empty Git repository in /home/runner/work/zhangmq.github.io/zhangmq.github.io/.git/
+2026-08-18T13:01:43.3236498Z [command]/usr/bin/git remote add origin https://github.com/zhangmq/zhangmq.github.io
+2026-08-18T13:01:43.3272113Z ##[endgroup]
+2026-08-18T13:01:43.3273133Z ##[group]Disabling automatic garbage collection
+2026-08-18T13:01:43.3275857Z [command]/usr/bin/git config --local gc.auto 0
+2026-08-18T13:01:43.3301299Z ##[endgroup]
+2026-08-18T13:01:43.3302397Z ##[group]Setting up auth
+2026-08-18T13:01:43.3303166Z Removing SSH command configuration
+2026-08-18T13:01:43.3307284Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-08-18T13:01:43.3351086Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-08-18T13:01:43.3654029Z Removing HTTP extra header
+2026-08-18T13:01:43.3666095Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-08-18T13:01:43.3690718Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-08-18T13:01:43.3882308Z Removing includeIf entries pointing to credentials config files
+2026-08-18T13:01:43.3887731Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-08-18T13:01:43.3917238Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-08-18T13:01:43.4097193Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-aa90f07f-3836-4351-a8c0-cf46ed0766fc.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-08-18T13:01:43.4129747Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/zhangmq.github.io/zhangmq.github.io/.git.path /home/runner/work/_temp/git-credentials-aa90f07f-3836-4351-a8c0-cf46ed0766fc.config
+2026-08-18T13:01:43.4154888Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/zhangmq.github.io/zhangmq.github.io/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-aa90f07f-3836-4351-a8c0-cf46ed0766fc.config
+2026-08-18T13:01:43.4183221Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-aa90f07f-3836-4351-a8c0-cf46ed0766fc.config
+2026-08-18T13:01:43.4207423Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-aa90f07f-3836-4351-a8c0-cf46ed0766fc.config
+2026-08-18T13:01:43.4229125Z ##[endgroup]
+2026-08-18T13:01:43.4229620Z ##[group]Fetching the repository
+2026-08-18T13:01:43.4235667Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-08-18T13:01:44.3832224Z From https://github.com/zhangmq/zhangmq.github.io
+2026-08-18T13:01:44.3833913Z  * [new branch]      master     -> origin/master
+2026-08-18T13:01:44.3868720Z [command]/usr/bin/git branch --list --remote origin/master
+2026-08-18T13:01:44.3899505Z   origin/master
+2026-08-18T13:01:44.3907512Z [command]/usr/bin/git rev-parse refs/remotes/origin/master
+2026-08-18T13:01:44.3928759Z d352c47568eaef6dac49fe1337d5f0c9c561b628
+2026-08-18T13:01:44.3931777Z ##[endgroup]
+2026-08-18T13:01:44.3932898Z ##[group]Determining the checkout info
+2026-08-18T13:01:44.3933976Z ##[endgroup]
+2026-08-18T13:01:44.3938114Z [command]/usr/bin/git sparse-checkout disable
+2026-08-18T13:01:44.3980943Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-08-18T13:01:44.4005924Z ##[group]Checking out the ref
+2026-08-18T13:01:44.4009978Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-08-18T13:01:44.4057644Z Reset branch 'master'
+2026-08-18T13:01:44.4058936Z branch 'master' set up to track 'origin/master'.
+2026-08-18T13:01:44.4064285Z ##[endgroup]
+2026-08-18T13:01:44.4100084Z [command]/usr/bin/git log -1 --format=%H
+2026-08-18T13:01:44.4121302Z d352c47568eaef6dac49fe1337d5f0c9c561b628
+2026-08-18T13:01:44.4312117Z ##[group]Run actions/configure-pages@v6
+2026-08-18T13:01:44.4312407Z with:
+2026-08-18T13:01:44.4315388Z   token: ***
+2026-08-18T13:01:44.4315586Z   enablement: false
+2026-08-18T13:01:44.4315785Z ##[endgroup]
+2026-08-18T13:01:44.8752126Z ##[group]Run ruby/setup-ruby@v1
+2026-08-18T13:01:44.8752403Z with:
+2026-08-18T13:01:44.8752831Z   ruby-version: 3.4
+2026-08-18T13:01:44.8753054Z   bundler-cache: true
+2026-08-18T13:01:44.8755549Z   token: ***
+2026-08-18T13:01:44.8755734Z env:
+2026-08-18T13:01:44.8755912Z   GITHUB_PAGES: true
+2026-08-18T13:01:44.8756114Z ##[endgroup]
+2026-08-18T13:01:44.9977997Z ##[group]Modifying PATH
+2026-08-18T13:01:44.9978635Z Entries added to PATH to use selected Ruby:
+2026-08-18T13:01:44.9980069Z   /opt/hostedtoolcache/Ruby/3.4.10/x64/bin
+2026-08-18T13:01:44.9983740Z ##[endgroup]
+2026-08-18T13:01:44.9984613Z ##[group]Print Ruby version
+2026-08-18T13:01:45.0025454Z [command]/opt/hostedtoolcache/Ruby/3.4.10/x64/bin/ruby --version
+2026-08-18T13:01:45.0282590Z ruby 3.4.10 (2026-06-30 revision 2b0b7728dc) +PRISM [x86_64-linux]
+2026-08-18T13:01:45.0305314Z Took   0.03 seconds
+2026-08-18T13:01:45.0306186Z ##[endgroup]
+2026-08-18T13:01:45.0306824Z ##[group]Installing Bundler
+2026-08-18T13:01:45.0311527Z Using Bundler shipped with ruby-3.4.10
+2026-08-18T13:01:45.0312083Z Took   0.00 seconds
+2026-08-18T13:01:45.0314262Z ##[endgroup]
+2026-08-18T13:01:45.0314674Z > bundle install
+2026-08-18T13:01:45.0316351Z Setting BUNDLER_VERSION=2 for "bundle config|lock" commands below to ensure Bundler 2 is used
+2026-08-18T13:01:45.0334038Z [command]/opt/hostedtoolcache/Ruby/3.4.10/x64/bin/bundle config set --local path /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle
+2026-08-18T13:01:45.2595636Z [command]/opt/hostedtoolcache/Ruby/3.4.10/x64/bin/bundle lock
+2026-08-18T13:01:45.5091413Z Writing lockfile to /home/runner/work/zhangmq.github.io/zhangmq.github.io/Gemfile.lock
+2026-08-18T13:01:45.5092003Z Fetching https://github.com/zhangmq/jekyll-archives.git
+2026-08-18T13:01:48.1840577Z Fetching gem metadata from https://rubygems.org/..........
+2026-08-18T13:01:48.2065745Z Resolving dependencies...
+2026-08-18T13:01:48.6793013Z ##[group]Print lockfile
+2026-08-18T13:01:48.6811680Z [command]/usr/bin/cat Gemfile.lock
+2026-08-18T13:01:48.6836193Z GIT
+2026-08-18T13:01:48.6836740Z   remote: https://github.com/zhangmq/jekyll-archives.git
+2026-08-18T13:01:48.6837335Z   revision: 92a2255ee97e5985f514e6d07c6bbe87777ea266
+2026-08-18T13:01:48.6838287Z   specs:
+2026-08-18T13:01:48.6838610Z     jekyll-archives (2.3.1)
+2026-08-18T13:01:48.6838973Z       jekyll (>= 3.6, < 5.0)
+2026-08-18T13:01:48.6839226Z 
+2026-08-18T13:01:48.6839356Z GEM
+2026-08-18T13:01:48.6839717Z   remote: https://rubygems.org/
+2026-08-18T13:01:48.6840119Z   specs:
+2026-08-18T13:01:48.6840410Z     Ascii85 (2.0.1)
+2026-08-18T13:01:48.6840744Z     addressable (2.9.0)
+2026-08-18T13:01:48.6841115Z       public_suffix (>= 2.0.2, < 8.0)
+2026-08-18T13:01:48.6841518Z     afm (1.0.0)
+2026-08-18T13:01:48.6841845Z     async (2.44.1)
+2026-08-18T13:01:48.6842181Z       console (~> 1.29)
+2026-08-18T13:01:48.6842711Z       fiber-annotation
+2026-08-18T13:01:48.6843044Z       io-event (~> 1.11)
+2026-08-18T13:01:48.6854572Z     base64 (0.3.0)
+2026-08-18T13:01:48.6855124Z     benchmark (0.5.0)
+2026-08-18T13:01:48.6855507Z     bigdecimal (3.3.1)
+2026-08-18T13:01:48.6855872Z     colorator (1.1.0)
+2026-08-18T13:01:48.6856233Z     concurrent-ruby (1.3.8)
+2026-08-18T13:01:48.6856699Z     console (1.37.0)
+2026-08-18T13:01:48.6857044Z       fiber-annotation
+2026-08-18T13:01:48.6857458Z       fiber-local (~> 1.1)
+2026-08-18T13:01:48.6857813Z       json
+2026-08-18T13:01:48.6858097Z     csv (3.3.6)
+2026-08-18T13:01:48.6858470Z     em-websocket (0.5.3)
+2026-08-18T13:01:48.6858841Z       eventmachine (>= 0.12.9)
+2026-08-18T13:01:48.6859233Z       http_parser.rb (~> 0)
+2026-08-18T13:01:48.6859631Z     ethon (0.18.0)
+2026-08-18T13:01:48.6859955Z       ffi (>= 1.15.0)
+2026-08-18T13:01:48.6860297Z       logger
+2026-08-18T13:01:48.6860621Z     eventmachine (1.2.7)
+2026-08-18T13:01:48.6861024Z     ffi (1.17.4-aarch64-linux-gnu)
+2026-08-18T13:01:48.6861473Z     ffi (1.17.4-aarch64-linux-musl)
+2026-08-18T13:01:48.6861903Z     ffi (1.17.4-arm-linux-gnu)
+2026-08-18T13:01:48.6862848Z     ffi (1.17.4-arm-linux-musl)
+2026-08-18T13:01:48.6863290Z     ffi (1.17.4-arm64-darwin)
+2026-08-18T13:01:48.6863704Z     ffi (1.17.4-x86_64-darwin)
+2026-08-18T13:01:48.6864068Z     ffi (1.17.4-x86_64-linux-gnu)
+2026-08-18T13:01:48.6864482Z     ffi (1.17.4-x86_64-linux-musl)
+2026-08-18T13:01:48.6864907Z     fiber-annotation (0.2.0)
+2026-08-18T13:01:48.6865352Z     fiber-local (1.1.0)
+2026-08-18T13:01:48.6865718Z       fiber-storage
+2026-08-18T13:01:48.6866072Z     fiber-storage (1.0.1)
+2026-08-18T13:01:48.6866500Z     forwardable-extended (2.6.0)
+2026-08-18T13:01:48.6867002Z     google-protobuf (4.35.1)
+2026-08-18T13:01:48.6867383Z       bigdecimal
+2026-08-18T13:01:48.6867706Z       rake (~> 13.3)
+2026-08-18T13:01:48.6868115Z     google-protobuf (4.35.1-aarch64-linux-gnu)
+2026-08-18T13:01:48.6868573Z       bigdecimal
+2026-08-18T13:01:48.6868885Z       rake (~> 13.3)
+2026-08-18T13:01:48.6869297Z     google-protobuf (4.35.1-aarch64-linux-musl)
+2026-08-18T13:01:48.6869755Z       bigdecimal
+2026-08-18T13:01:48.6870080Z       rake (~> 13.3)
+2026-08-18T13:01:48.6870486Z     google-protobuf (4.35.1-arm64-darwin)
+2026-08-18T13:01:48.6870945Z       bigdecimal
+2026-08-18T13:01:48.6871240Z       rake (~> 13.3)
+2026-08-18T13:01:48.6871605Z     google-protobuf (4.35.1-x86_64-darwin)
+2026-08-18T13:01:48.6872027Z       bigdecimal
+2026-08-18T13:01:48.6872335Z       rake (~> 13.3)
+2026-08-18T13:01:48.6872895Z     google-protobuf (4.35.1-x86_64-linux-gnu)
+2026-08-18T13:01:48.6873365Z       bigdecimal
+2026-08-18T13:01:48.6873740Z       rake (~> 13.3)
+2026-08-18T13:01:48.6874162Z     google-protobuf (4.35.1-x86_64-linux-musl)
+2026-08-18T13:01:48.6874624Z       bigdecimal
+2026-08-18T13:01:48.6874931Z       rake (~> 13.3)
+2026-08-18T13:01:48.6875245Z     hashery (2.1.2)
+2026-08-18T13:01:48.6875603Z     html-proofer (5.2.2)
+2026-08-18T13:01:48.6875985Z       addressable (~> 2.3)
+2026-08-18T13:01:48.6876324Z       async (~> 2.1)
+2026-08-18T13:01:48.6876645Z       benchmark (~> 0.5)
+2026-08-18T13:01:48.6877003Z       nokogiri (~> 1.13)
+2026-08-18T13:01:48.6877392Z       pdf-reader (~> 2.11)
+2026-08-18T13:01:48.6877747Z       rainbow (~> 3.0)
+2026-08-18T13:01:48.6878104Z       typhoeus (~> 1.3)
+2026-08-18T13:01:48.6878754Z       yell (~> 2.0)
+2026-08-18T13:01:48.6879075Z       zeitwerk (~> 2.5)
+2026-08-18T13:01:48.6879409Z     http_parser.rb (0.8.1)
+2026-08-18T13:01:48.6879762Z     i18n (1.15.2)
+2026-08-18T13:01:48.6880103Z       concurrent-ruby (~> 1.0)
+2026-08-18T13:01:48.6880527Z     io-event (1.19.5)
+2026-08-18T13:01:48.6880877Z     jekyll (4.4.1)
+2026-08-18T13:01:48.6881262Z       addressable (~> 2.4)
+2026-08-18T13:01:48.6881606Z       base64 (~> 0.2)
+2026-08-18T13:01:48.6881943Z       colorator (~> 1.0)
+2026-08-18T13:01:48.6882298Z       csv (~> 3.0)
+2026-08-18T13:01:48.6882987Z       em-websocket (~> 0.5)
+2026-08-18T13:01:48.6883339Z       i18n (~> 1.0)
+2026-08-18T13:01:48.6883695Z       jekyll-sass-converter (>= 2.0, < 4.0)
+2026-08-18T13:01:48.6884147Z       jekyll-watch (~> 2.0)
+2026-08-18T13:01:48.6884537Z       json (~> 2.6)
+2026-08-18T13:01:48.6884943Z       kramdown (~> 2.3, >= 2.3.1)
+2026-08-18T13:01:48.6885349Z       kramdown-parser-gfm (~> 1.0)
+2026-08-18T13:01:48.6885698Z       liquid (~> 4.0)
+2026-08-18T13:01:48.6886049Z       mercenary (~> 0.3, >= 0.3.6)
+2026-08-18T13:01:48.6886421Z       pathutil (~> 0.9)
+2026-08-18T13:01:48.6886741Z       rouge (>= 3.0, < 5.0)
+2026-08-18T13:01:48.6887075Z       safe_yaml (~> 1.0)
+2026-08-18T13:01:48.6887446Z       terminal-table (>= 1.8, < 4.0)
+2026-08-18T13:01:48.6887836Z       webrick (~> 1.7)
+2026-08-18T13:01:48.6888224Z     jekyll-include-cache (0.2.2)
+2026-08-18T13:01:48.6888646Z       jekyll (>= 3.7, < 5.0)
+2026-08-18T13:01:48.6889045Z     jekyll-paginate (1.1.0)
+2026-08-18T13:01:48.6889450Z     jekyll-sass-converter (3.1.0)
+2026-08-18T13:01:48.6889868Z       sass-embedded (~> 1.75)
+2026-08-18T13:01:48.6890214Z     jekyll-seo-tag (2.9.0)
+2026-08-18T13:01:48.6890597Z       jekyll (>= 3.8, < 5.0)
+2026-08-18T13:01:48.6890981Z     jekyll-sitemap (1.4.0)
+2026-08-18T13:01:48.6891644Z       jekyll (>= 3.7, < 5.0)
+2026-08-18T13:01:48.6892096Z     jekyll-theme-chirpy (7.6.0)
+2026-08-18T13:01:48.6892972Z       jekyll (~> 4.3)
+2026-08-18T13:01:48.6893349Z       jekyll-archives (~> 2.2)
+2026-08-18T13:01:48.6893781Z       jekyll-include-cache (~> 0.2)
+2026-08-18T13:01:48.6894172Z       jekyll-paginate (~> 1.1)
+2026-08-18T13:01:48.6894599Z       jekyll-seo-tag (~> 2.8)
+2026-08-18T13:01:48.6895012Z       jekyll-sitemap (~> 1.4)
+2026-08-18T13:01:48.6895408Z     jekyll-watch (2.2.1)
+2026-08-18T13:01:48.6895769Z       listen (~> 3.0)
+2026-08-18T13:01:48.6896083Z     json (2.21.2)
+2026-08-18T13:01:48.6896374Z     kramdown (2.5.2)
+2026-08-18T13:01:48.6896716Z       rexml (>= 3.4.4)
+2026-08-18T13:01:48.6897074Z     kramdown-parser-gfm (1.1.0)
+2026-08-18T13:01:48.6897455Z       kramdown (~> 2.0)
+2026-08-18T13:01:48.6897819Z     liquid (4.0.4)
+2026-08-18T13:01:48.6898173Z     listen (3.10.0)
+2026-08-18T13:01:48.6898509Z       logger
+2026-08-18T13:01:48.6898837Z       rb-fsevent (~> 0.10, >= 0.10.3)
+2026-08-18T13:01:48.6899275Z       rb-inotify (~> 0.9, >= 0.9.10)
+2026-08-18T13:01:48.6899660Z     logger (1.7.0)
+2026-08-18T13:01:48.6900006Z     mercenary (0.4.0)
+2026-08-18T13:01:48.6900406Z     nokogiri (1.19.4-aarch64-linux-gnu)
+2026-08-18T13:01:48.6901473Z       racc (~> 1.4)
+2026-08-18T13:01:48.6901837Z     nokogiri (1.19.4-aarch64-linux-musl)
+2026-08-18T13:01:48.6902260Z       racc (~> 1.4)
+2026-08-18T13:01:48.6902771Z     nokogiri (1.19.4-arm-linux-gnu)
+2026-08-18T13:01:48.6903157Z       racc (~> 1.4)
+2026-08-18T13:01:48.6903502Z     nokogiri (1.19.4-arm-linux-musl)
+2026-08-18T13:01:48.6903864Z       racc (~> 1.4)
+2026-08-18T13:01:48.6904188Z     nokogiri (1.19.4-arm64-darwin)
+2026-08-18T13:01:48.6904577Z       racc (~> 1.4)
+2026-08-18T13:01:48.6904934Z     nokogiri (1.19.4-x86_64-darwin)
+2026-08-18T13:01:48.6905316Z       racc (~> 1.4)
+2026-08-18T13:01:48.6905646Z     nokogiri (1.19.4-x86_64-linux-gnu)
+2026-08-18T13:01:48.6906061Z       racc (~> 1.4)
+2026-08-18T13:01:48.6906417Z     nokogiri (1.19.4-x86_64-linux-musl)
+2026-08-18T13:01:48.6906860Z       racc (~> 1.4)
+2026-08-18T13:01:48.6907178Z     pathutil (0.16.2)
+2026-08-18T13:01:48.6907508Z       forwardable-extended (~> 2.6)
+2026-08-18T13:01:48.6908110Z     pdf-reader (2.16.0)
+2026-08-18T13:01:48.6908419Z       Ascii85 (>= 1.0, < 3.0, != 2.0.0)
+2026-08-18T13:01:48.6908783Z       afm (>= 0.2.1, < 2)
+2026-08-18T13:01:48.6909130Z       hashery (~> 2.0)
+2026-08-18T13:01:48.6909464Z       ttfunk
+2026-08-18T13:01:48.6909902Z     public_suffix (7.0.5)
+2026-08-18T13:01:48.6910287Z     racc (1.8.1)
+2026-08-18T13:01:48.6910594Z     rainbow (3.1.1)
+2026-08-18T13:01:48.6910904Z     rake (13.4.2)
+2026-08-18T13:01:48.6911227Z     rb-fsevent (0.11.2)
+2026-08-18T13:01:48.6911586Z     rb-inotify (0.11.1)
+2026-08-18T13:01:48.6911930Z       ffi (~> 1.0)
+2026-08-18T13:01:48.6912238Z     rexml (3.4.4)
+2026-08-18T13:01:48.6912702Z     rouge (4.7.0)
+2026-08-18T13:01:48.6913063Z     safe_yaml (1.0.5)
+2026-08-18T13:01:48.6913530Z     sass-embedded (1.102.0-aarch64-linux-gnu)
+2026-08-18T13:01:48.6914069Z       google-protobuf (~> 4.31)
+2026-08-18T13:01:48.6914507Z     sass-embedded (1.102.0-aarch64-linux-musl)
+2026-08-18T13:01:48.6914958Z       google-protobuf (~> 4.31)
+2026-08-18T13:01:48.6915410Z     sass-embedded (1.102.0-arm-linux-gnueabihf)
+2026-08-18T13:01:48.6915906Z       google-protobuf (~> 4.31)
+2026-08-18T13:01:48.6916366Z     sass-embedded (1.102.0-arm-linux-musleabihf)
+2026-08-18T13:01:48.6916846Z       google-protobuf (~> 4.31)
+2026-08-18T13:01:48.6917234Z     sass-embedded (1.102.0-arm64-darwin)
+2026-08-18T13:01:48.6917658Z       google-protobuf (~> 4.31)
+2026-08-18T13:01:48.6918029Z     sass-embedded (1.102.0-x86_64-darwin)
+2026-08-18T13:01:48.6918499Z       google-protobuf (~> 4.31)
+2026-08-18T13:01:48.6918899Z     sass-embedded (1.102.0-x86_64-linux-gnu)
+2026-08-18T13:01:48.6919315Z       google-protobuf (~> 4.31)
+2026-08-18T13:01:48.6919756Z     sass-embedded (1.102.0-x86_64-linux-musl)
+2026-08-18T13:01:48.6920173Z       google-protobuf (~> 4.31)
+2026-08-18T13:01:48.6920774Z     terminal-table (3.0.2)
+2026-08-18T13:01:48.6921203Z       unicode-display_width (>= 1.1.1, < 3)
+2026-08-18T13:01:48.6921605Z     ttfunk (1.8.0)
+2026-08-18T13:01:48.6921950Z       bigdecimal (~> 3.1)
+2026-08-18T13:01:48.6922300Z     typhoeus (1.6.0)
+2026-08-18T13:01:48.6923086Z       ethon (>= 0.18.0)
+2026-08-18T13:01:48.6923464Z     unicode-display_width (2.6.0)
+2026-08-18T13:01:48.6923827Z     webrick (1.9.2)
+2026-08-18T13:01:48.6924157Z     yell (2.2.2)
+2026-08-18T13:01:48.6924450Z     zeitwerk (2.8.3)
+2026-08-18T13:01:48.6924693Z 
+2026-08-18T13:01:48.6924827Z PLATFORMS
+2026-08-18T13:01:48.6925126Z   aarch64-linux-gnu
+2026-08-18T13:01:48.6925457Z   aarch64-linux-musl
+2026-08-18T13:01:48.6925800Z   arm-linux-gnu
+2026-08-18T13:01:48.6926101Z   arm-linux-gnueabihf
+2026-08-18T13:01:48.6926433Z   arm-linux-musl
+2026-08-18T13:01:48.6926751Z   arm-linux-musleabihf
+2026-08-18T13:01:48.6927065Z   arm64-darwin
+2026-08-18T13:01:48.6927374Z   x86_64-darwin
+2026-08-18T13:01:48.6927680Z   x86_64-linux-gnu
+2026-08-18T13:01:48.6928013Z   x86_64-linux-musl
+2026-08-18T13:01:48.6928203Z 
+2026-08-18T13:01:48.6928349Z DEPENDENCIES
+2026-08-18T13:01:48.6928636Z   html-proofer (~> 5.0)
+2026-08-18T13:01:48.6929005Z   jekyll-archives!
+2026-08-18T13:01:48.6929338Z   jekyll-theme-chirpy (~> 7.6)
+2026-08-18T13:01:48.6929588Z 
+2026-08-18T13:01:48.6929736Z BUNDLED WITH
+2026-08-18T13:01:48.6930015Z    2.6.9
+2026-08-18T13:01:48.6930715Z ##[endgroup]
+2026-08-18T13:01:48.6932308Z Cache key: setup-ruby-bundler-cache-v6-ubuntu-24.04-x64-ruby-3.4.10-wd-/home/runner/work/zhangmq.github.io/zhangmq.github.io-with--without--only--Gemfile.lock-d46480c54e282e9b014ce75ecf0bbc26ca2440ee44cb19b3c3b0fc0e9730e7e5
+2026-08-18T13:01:48.9355287Z Cache hit for: setup-ruby-bundler-cache-v6-ubuntu-24.04-x64-ruby-3.4.10-wd-/home/runner/work/zhangmq.github.io/zhangmq.github.io-with--without--only--Gemfile.lock-d46480c54e282e9b014ce75ecf0bbc26ca2440ee44cb19b3c3b0fc0e9730e7e5
+2026-08-18T13:01:50.2207854Z Received 5210330 of 30376154 (17.2%), 5.0 MBs/sec
+2026-08-18T13:01:50.4661523Z Received 30376154 of 30376154 (100.0%), 23.3 MBs/sec
+2026-08-18T13:01:50.4662016Z Cache Size: ~29 MB (30376154 B)
+2026-08-18T13:01:50.4777951Z [command]/usr/bin/tar -xf /home/runner/work/_temp/94d1affc-4410-4f9b-bce4-c655cc818e6f/cache.tzst -P -C /home/runner/work/zhangmq.github.io/zhangmq.github.io --use-compress-program unzstd
+2026-08-18T13:01:50.6194281Z Cache restored successfully
+2026-08-18T13:01:50.6208048Z Found cache for key: setup-ruby-bundler-cache-v6-ubuntu-24.04-x64-ruby-3.4.10-wd-/home/runner/work/zhangmq.github.io/zhangmq.github.io-with--without--only--Gemfile.lock-d46480c54e282e9b014ce75ecf0bbc26ca2440ee44cb19b3c3b0fc0e9730e7e5
+2026-08-18T13:01:50.6219678Z [command]/opt/hostedtoolcache/Ruby/3.4.10/x64/bin/bundle install --jobs 4
+2026-08-18T13:01:50.9154929Z Bundle complete! 3 Gemfile dependencies, 62 gems now installed.
+2026-08-18T13:01:50.9155625Z Bundled gems are installed into `./vendor/bundle`
+2026-08-18T13:01:50.9156248Z 1 installed gem you directly depend on is looking for funding.
+2026-08-18T13:01:50.9156925Z   Run `bundle fund` for details
+2026-08-18T13:01:50.9281253Z Took   5.90 seconds
+2026-08-18T13:01:50.9395831Z ##[group]Run bundle exec jekyll b -d "_site"
+2026-08-18T13:01:50.9396251Z [36;1mbundle exec jekyll b -d "_site"[0m
+2026-08-18T13:01:50.9423358Z shell: /usr/bin/bash -e {0}
+2026-08-18T13:01:50.9423619Z env:
+2026-08-18T13:01:50.9423813Z   GITHUB_PAGES: true
+2026-08-18T13:01:50.9424042Z   JEKYLL_ENV: production
+2026-08-18T13:01:50.9424257Z ##[endgroup]
+2026-08-18T13:01:51.6615196Z Configuration file: /home/runner/work/zhangmq.github.io/zhangmq.github.io/_config.yml
+2026-08-18T13:01:51.6747897Z             Source: /home/runner/work/zhangmq.github.io/zhangmq.github.io
+2026-08-18T13:01:51.6748773Z        Destination: /home/runner/work/zhangmq.github.io/zhangmq.github.io/_site
+2026-08-18T13:01:51.6749289Z  Incremental build: disabled. Enable with --incremental
+2026-08-18T13:01:51.6749653Z       Generating... 
+2026-08-18T13:01:52.0469502Z [31m  Liquid Exception: Error accessing object ([#<Jekyll::Document ) with given key. Expected an integer but got "lang" instead. in /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-theme-chirpy-7.6.0/_layouts/default.html[0m
+2026-08-18T13:01:52.0470685Z [31m                    ------------------------------------------------[0m
+2026-08-18T13:01:52.0471162Z [31m      Jekyll 4.4.1   Please append `--trace` to the `build` command [0m
+2026-08-18T13:01:52.0471625Z [31m                     for any additional information or backtrace. [0m
+2026-08-18T13:01:52.0472059Z [31m                    ------------------------------------------------[0m
+2026-08-18T13:01:52.2328899Z /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/filters.rb:439:in 'Jekyll::Filters#read_liquid_attribute': Error accessing object ([#<Jekyll::Document ) with given key. Expected an integer but got "lang" instead. (TypeError)
+2026-08-18T13:01:52.2330108Z 
+2026-08-18T13:01:52.2330311Z       return liquid_data[property] unless property.include?(".")
+2026-08-18T13:01:52.2330760Z                          ^^^^^^^^
+2026-08-18T13:01:52.2331528Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/filters.rb:427:in 'Jekyll::Filters#item_property'
+2026-08-18T13:01:52.2333177Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/filters.rb:198:in 'block in Jekyll::Filters#where'
+2026-08-18T13:01:52.2334297Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/filters.rb:197:in 'Array#select'
+2026-08-18T13:01:52.2335403Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/filters.rb:197:in 'Jekyll::Filters#where'
+2026-08-18T13:01:52.2336516Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/strainer.rb:56:in 'Liquid::Strainer#invoke'
+2026-08-18T13:01:52.2337691Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/context.rb:86:in 'Liquid::Context#invoke'
+2026-08-18T13:01:52.2339126Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/variable.rb:84:in 'block in Liquid::Variable#render'
+2026-08-18T13:01:52.2340248Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/variable.rb:82:in 'Array#each'
+2026-08-18T13:01:52.2341316Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/variable.rb:82:in 'Enumerable#inject'
+2026-08-18T13:01:52.2342564Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/variable.rb:82:in 'Liquid::Variable#render'
+2026-08-18T13:01:52.2343835Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/assign.rb:26:in 'Liquid::Assign#render'
+2026-08-18T13:01:52.2345039Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:103:in 'Liquid::BlockBody#render_node_to_output'
+2026-08-18T13:01:52.2346256Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:91:in 'Liquid::BlockBody#render'
+2026-08-18T13:01:52.2347460Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/for.rb:160:in 'block (2 levels) in Liquid::For#render_segment'
+2026-08-18T13:01:52.2348624Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/for.rb:158:in 'Array#each'
+2026-08-18T13:01:52.2349755Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/for.rb:158:in 'block in Liquid::For#render_segment'
+2026-08-18T13:01:52.2350914Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/context.rb:123:in 'Liquid::Context#stack'
+2026-08-18T13:01:52.2352038Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/for.rb:150:in 'Liquid::For#render_segment'
+2026-08-18T13:01:52.2353240Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/for.rb:79:in 'Liquid::For#render'
+2026-08-18T13:01:52.2354407Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:103:in 'Liquid::BlockBody#render_node_to_output'
+2026-08-18T13:01:52.2355595Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:82:in 'Liquid::BlockBody#render'
+2026-08-18T13:01:52.2356768Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:206:in 'block in Liquid::Template#render'
+2026-08-18T13:01:52.2358361Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:240:in 'Liquid::Template#with_profiling'
+2026-08-18T13:01:52.2360056Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:205:in 'Liquid::Template#render'
+2026-08-18T13:01:52.2361185Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:218:in 'Liquid::Template#render!'
+2026-08-18T13:01:52.2362556Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:39:in 'block (3 levels) in Jekyll::LiquidRenderer::File#render!'
+2026-08-18T13:01:52.2363963Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:59:in 'Jekyll::LiquidRenderer::File#measure_counts'
+2026-08-18T13:01:52.2365456Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:38:in 'block (2 levels) in Jekyll::LiquidRenderer::File#render!'
+2026-08-18T13:01:52.2366847Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:63:in 'Jekyll::LiquidRenderer::File#measure_bytes'
+2026-08-18T13:01:52.2368215Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:37:in 'block in Jekyll::LiquidRenderer::File#render!'
+2026-08-18T13:01:52.2369564Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:70:in 'Jekyll::LiquidRenderer::File#measure_time'
+2026-08-18T13:01:52.2370990Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:36:in 'Jekyll::LiquidRenderer::File#render!'
+2026-08-18T13:01:52.2372225Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/inclusion.rb:16:in 'Jekyll::Inclusion#render'
+2026-08-18T13:01:52.2373702Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/tags/include.rb:208:in 'block in Jekyll::Tags::OptimizedIncludeTag#render'
+2026-08-18T13:01:52.2374935Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/context.rb:123:in 'Liquid::Context#stack'
+2026-08-18T13:01:52.2376143Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/tags/include.rb:206:in 'Jekyll::Tags::OptimizedIncludeTag#render'
+2026-08-18T13:01:52.2377416Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:103:in 'Liquid::BlockBody#render_node_to_output'
+2026-08-18T13:01:52.2378616Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:91:in 'Liquid::BlockBody#render'
+2026-08-18T13:01:52.2379830Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/for.rb:160:in 'block (2 levels) in Liquid::For#render_segment'
+2026-08-18T13:01:52.2381001Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/for.rb:158:in 'Array#each'
+2026-08-18T13:01:52.2382126Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/for.rb:158:in 'block in Liquid::For#render_segment'
+2026-08-18T13:01:52.2383369Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/context.rb:123:in 'Liquid::Context#stack'
+2026-08-18T13:01:52.2384620Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/for.rb:150:in 'Liquid::For#render_segment'
+2026-08-18T13:01:52.2461285Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/for.rb:79:in 'Liquid::For#render'
+2026-08-18T13:01:52.2463267Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:103:in 'Liquid::BlockBody#render_node_to_output'
+2026-08-18T13:01:52.2464832Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:82:in 'Liquid::BlockBody#render'
+2026-08-18T13:01:52.2466322Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:206:in 'block in Liquid::Template#render'
+2026-08-18T13:01:52.2468222Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:240:in 'Liquid::Template#with_profiling'
+2026-08-18T13:01:52.2469979Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:205:in 'Liquid::Template#render'
+2026-08-18T13:01:52.2471706Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:218:in 'Liquid::Template#render!'
+2026-08-18T13:01:52.2473852Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:39:in 'block (3 levels) in Jekyll::LiquidRenderer::File#render!'
+2026-08-18T13:01:52.2476389Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:59:in 'Jekyll::LiquidRenderer::File#measure_counts'
+2026-08-18T13:01:52.2478468Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:38:in 'block (2 levels) in Jekyll::LiquidRenderer::File#render!'
+2026-08-18T13:01:52.2480235Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:63:in 'Jekyll::LiquidRenderer::File#measure_bytes'
+2026-08-18T13:01:52.2481360Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:37:in 'block in Jekyll::LiquidRenderer::File#render!'
+2026-08-18T13:01:52.2482797Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:70:in 'Jekyll::LiquidRenderer::File#measure_time'
+2026-08-18T13:01:52.2483927Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:36:in 'Jekyll::LiquidRenderer::File#render!'
+2026-08-18T13:01:52.2484963Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:129:in 'Jekyll::Renderer#render_liquid'
+2026-08-18T13:01:52.2485938Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:192:in 'Jekyll::Renderer#render_layout'
+2026-08-18T13:01:52.2486929Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:161:in 'Jekyll::Renderer#place_in_layouts'
+2026-08-18T13:01:52.2487913Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:93:in 'Jekyll::Renderer#render_document'
+2026-08-18T13:01:52.2488867Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:63:in 'Jekyll::Renderer#run'
+2026-08-18T13:01:52.2489802Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:572:in 'Jekyll::Site#render_regenerated'
+2026-08-18T13:01:52.2490795Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:557:in 'block (2 levels) in Jekyll::Site#render_docs'
+2026-08-18T13:01:52.2491722Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:556:in 'Array#each'
+2026-08-18T13:01:52.2492848Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:556:in 'block in Jekyll::Site#render_docs'
+2026-08-18T13:01:52.2493760Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:555:in 'Hash#each_value'
+2026-08-18T13:01:52.2494666Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:555:in 'Jekyll::Site#render_docs'
+2026-08-18T13:01:52.2495722Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:210:in 'Jekyll::Site#render'
+2026-08-18T13:01:52.2496605Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:80:in 'Jekyll::Site#process'
+2026-08-18T13:01:52.2497530Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:28:in 'Jekyll::Command.process_site'
+2026-08-18T13:01:52.2498530Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/build.rb:65:in 'Jekyll::Commands::Build.build'
+2026-08-18T13:01:52.2499623Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/build.rb:36:in 'Jekyll::Commands::Build.process'
+2026-08-18T13:01:52.2500685Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in 'block in Jekyll::Command.process_with_graceful_fail'
+2026-08-18T13:01:52.2501656Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in 'Array#each'
+2026-08-18T13:01:52.2502796Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in 'Jekyll::Command.process_with_graceful_fail'
+2026-08-18T13:01:52.2503898Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/build.rb:18:in 'block (2 levels) in Jekyll::Commands::Build.init_with_program'
+2026-08-18T13:01:52.2505017Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in 'block in Mercenary::Command#execute'
+2026-08-18T13:01:52.2506001Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in 'Array#each'
+2026-08-18T13:01:52.2506958Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in 'Mercenary::Command#execute'
+2026-08-18T13:01:52.2507933Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/mercenary-0.4.0/lib/mercenary/program.rb:44:in 'Mercenary::Program#go'
+2026-08-18T13:01:52.2508855Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/mercenary-0.4.0/lib/mercenary.rb:21:in 'Mercenary.program'
+2026-08-18T13:01:52.2509723Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/exe/jekyll:15:in '<top (required)>'
+2026-08-18T13:01:52.2510483Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/bin/jekyll:25:in 'Kernel#load'
+2026-08-18T13:01:52.2511188Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/bin/jekyll:25:in '<top (required)>'
+2026-08-18T13:01:52.2511840Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/cli/exec.rb:59:in 'Kernel.load'
+2026-08-18T13:01:52.2512602Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/cli/exec.rb:59:in 'Bundler::CLI::Exec#kernel_load'
+2026-08-18T13:01:52.2513266Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/cli/exec.rb:23:in 'Bundler::CLI::Exec#run'
+2026-08-18T13:01:52.2513865Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/cli.rb:452:in 'Bundler::CLI#exec'
+2026-08-18T13:01:52.2514543Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/vendor/thor/lib/thor/command.rb:28:in 'Bundler::Thor::Command#run'
+2026-08-18T13:01:52.2515382Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in 'Bundler::Thor::Invocation#invoke_command'
+2026-08-18T13:01:52.2516256Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/vendor/thor/lib/thor.rb:538:in 'Bundler::Thor.dispatch'
+2026-08-18T13:01:52.2516909Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/cli.rb:35:in 'Bundler::CLI.dispatch'
+2026-08-18T13:01:52.2517631Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/vendor/thor/lib/thor/base.rb:584:in 'Bundler::Thor::Base::ClassMethods#start'
+2026-08-18T13:01:52.2518340Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/cli.rb:29:in 'Bundler::CLI.start'
+2026-08-18T13:01:52.2519002Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/exe/bundle:28:in 'block in <top (required)>'
+2026-08-18T13:01:52.2519786Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/friendly_errors.rb:117:in 'Bundler.with_friendly_errors'
+2026-08-18T13:01:52.2520470Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/exe/bundle:20:in '<top (required)>'
+2026-08-18T13:01:52.2521032Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/bin/bundle:25:in 'Kernel#load'
+2026-08-18T13:01:52.2521465Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/bin/bundle:25:in '<main>'
+2026-08-18T13:01:52.2522431Z /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/filters.rb:439:in 'Jekyll::Filters#read_liquid_attribute': no implicit conversion of String into Integer (TypeError)
+2026-08-18T13:01:52.2523391Z 
+2026-08-18T13:01:52.2523551Z       return liquid_data[property] unless property.include?(".")
+2026-08-18T13:01:52.2523881Z                          ^^^^^^^^
+2026-08-18T13:01:52.2524492Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/filters.rb:427:in 'Jekyll::Filters#item_property'
+2026-08-18T13:01:52.2525490Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/filters.rb:198:in 'block in Jekyll::Filters#where'
+2026-08-18T13:01:52.2526409Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/filters.rb:197:in 'Array#select'
+2026-08-18T13:01:52.2527313Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/filters.rb:197:in 'Jekyll::Filters#where'
+2026-08-18T13:01:52.2528239Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/strainer.rb:56:in 'Liquid::Strainer#invoke'
+2026-08-18T13:01:52.2529155Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/context.rb:86:in 'Liquid::Context#invoke'
+2026-08-18T13:01:52.2530105Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/variable.rb:84:in 'block in Liquid::Variable#render'
+2026-08-18T13:01:52.2531017Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/variable.rb:82:in 'Array#each'
+2026-08-18T13:01:52.2531902Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/variable.rb:82:in 'Enumerable#inject'
+2026-08-18T13:01:52.2532932Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/variable.rb:82:in 'Liquid::Variable#render'
+2026-08-18T13:01:52.2533859Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/assign.rb:26:in 'Liquid::Assign#render'
+2026-08-18T13:01:52.2534846Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:103:in 'Liquid::BlockBody#render_node_to_output'
+2026-08-18T13:01:52.2535849Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:91:in 'Liquid::BlockBody#render'
+2026-08-18T13:01:52.2537105Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/for.rb:160:in 'block (2 levels) in Liquid::For#render_segment'
+2026-08-18T13:01:52.2538066Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/for.rb:158:in 'Array#each'
+2026-08-18T13:01:52.2538997Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/for.rb:158:in 'block in Liquid::For#render_segment'
+2026-08-18T13:01:52.2539966Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/context.rb:123:in 'Liquid::Context#stack'
+2026-08-18T13:01:52.2540966Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/for.rb:150:in 'Liquid::For#render_segment'
+2026-08-18T13:01:52.2542063Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/for.rb:79:in 'Liquid::For#render'
+2026-08-18T13:01:52.2543119Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:103:in 'Liquid::BlockBody#render_node_to_output'
+2026-08-18T13:01:52.2544102Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:82:in 'Liquid::BlockBody#render'
+2026-08-18T13:01:52.2545063Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:206:in 'block in Liquid::Template#render'
+2026-08-18T13:01:52.2546046Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:240:in 'Liquid::Template#with_profiling'
+2026-08-18T13:01:52.2547013Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:205:in 'Liquid::Template#render'
+2026-08-18T13:01:52.2547940Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:218:in 'Liquid::Template#render!'
+2026-08-18T13:01:52.2549003Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:39:in 'block (3 levels) in Jekyll::LiquidRenderer::File#render!'
+2026-08-18T13:01:52.2550154Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:59:in 'Jekyll::LiquidRenderer::File#measure_counts'
+2026-08-18T13:01:52.2551294Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:38:in 'block (2 levels) in Jekyll::LiquidRenderer::File#render!'
+2026-08-18T13:01:52.2552428Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:63:in 'Jekyll::LiquidRenderer::File#measure_bytes'
+2026-08-18T13:01:52.2553596Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:37:in 'block in Jekyll::LiquidRenderer::File#render!'
+2026-08-18T13:01:52.2554713Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:70:in 'Jekyll::LiquidRenderer::File#measure_time'
+2026-08-18T13:01:52.2555816Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:36:in 'Jekyll::LiquidRenderer::File#render!'
+2026-08-18T13:01:52.2556819Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/inclusion.rb:16:in 'Jekyll::Inclusion#render'
+2026-08-18T13:01:52.2557916Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/tags/include.rb:208:in 'block in Jekyll::Tags::OptimizedIncludeTag#render'
+2026-08-18T13:01:52.2558920Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/context.rb:123:in 'Liquid::Context#stack'
+2026-08-18T13:01:52.2559903Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/tags/include.rb:206:in 'Jekyll::Tags::OptimizedIncludeTag#render'
+2026-08-18T13:01:52.2560955Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:103:in 'Liquid::BlockBody#render_node_to_output'
+2026-08-18T13:01:52.2561988Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:91:in 'Liquid::BlockBody#render'
+2026-08-18T13:01:52.2563047Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/for.rb:160:in 'block (2 levels) in Liquid::For#render_segment'
+2026-08-18T13:01:52.2563992Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/for.rb:158:in 'Array#each'
+2026-08-18T13:01:52.2564924Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/for.rb:158:in 'block in Liquid::For#render_segment'
+2026-08-18T13:01:52.2565867Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/context.rb:123:in 'Liquid::Context#stack'
+2026-08-18T13:01:52.2566795Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/for.rb:150:in 'Liquid::For#render_segment'
+2026-08-18T13:01:52.2567715Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/tags/for.rb:79:in 'Liquid::For#render'
+2026-08-18T13:01:52.2568670Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:103:in 'Liquid::BlockBody#render_node_to_output'
+2026-08-18T13:01:52.2569645Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:82:in 'Liquid::BlockBody#render'
+2026-08-18T13:01:52.2570604Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:206:in 'block in Liquid::Template#render'
+2026-08-18T13:01:52.2571587Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:240:in 'Liquid::Template#with_profiling'
+2026-08-18T13:01:52.2572594Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:205:in 'Liquid::Template#render'
+2026-08-18T13:01:52.2573527Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/liquid-4.0.4/lib/liquid/template.rb:218:in 'Liquid::Template#render!'
+2026-08-18T13:01:52.2574578Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:39:in 'block (3 levels) in Jekyll::LiquidRenderer::File#render!'
+2026-08-18T13:01:52.2575720Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:59:in 'Jekyll::LiquidRenderer::File#measure_counts'
+2026-08-18T13:01:52.2576869Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:38:in 'block (2 levels) in Jekyll::LiquidRenderer::File#render!'
+2026-08-18T13:01:52.2578005Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:63:in 'Jekyll::LiquidRenderer::File#measure_bytes'
+2026-08-18T13:01:52.2579174Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:37:in 'block in Jekyll::LiquidRenderer::File#render!'
+2026-08-18T13:01:52.2580277Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:70:in 'Jekyll::LiquidRenderer::File#measure_time'
+2026-08-18T13:01:52.2581371Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/liquid_renderer/file.rb:36:in 'Jekyll::LiquidRenderer::File#render!'
+2026-08-18T13:01:52.2582516Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:129:in 'Jekyll::Renderer#render_liquid'
+2026-08-18T13:01:52.2583493Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:192:in 'Jekyll::Renderer#render_layout'
+2026-08-18T13:01:52.2584478Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:161:in 'Jekyll::Renderer#place_in_layouts'
+2026-08-18T13:01:52.2585463Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:93:in 'Jekyll::Renderer#render_document'
+2026-08-18T13:01:52.2586416Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/renderer.rb:63:in 'Jekyll::Renderer#run'
+2026-08-18T13:01:52.2587344Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:572:in 'Jekyll::Site#render_regenerated'
+2026-08-18T13:01:52.2588327Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:557:in 'block (2 levels) in Jekyll::Site#render_docs'
+2026-08-18T13:01:52.2589245Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:556:in 'Array#each'
+2026-08-18T13:01:52.2590141Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:556:in 'block in Jekyll::Site#render_docs'
+2026-08-18T13:01:52.2591041Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:555:in 'Hash#each_value'
+2026-08-18T13:01:52.2591926Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:555:in 'Jekyll::Site#render_docs'
+2026-08-18T13:01:52.2592880Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:210:in 'Jekyll::Site#render'
+2026-08-18T13:01:52.2593771Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/site.rb:80:in 'Jekyll::Site#process'
+2026-08-18T13:01:52.2594692Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:28:in 'Jekyll::Command.process_site'
+2026-08-18T13:01:52.2595668Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/build.rb:65:in 'Jekyll::Commands::Build.build'
+2026-08-18T13:01:52.2596689Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/build.rb:36:in 'Jekyll::Commands::Build.process'
+2026-08-18T13:01:52.2597730Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in 'block in Jekyll::Command.process_with_graceful_fail'
+2026-08-18T13:01:52.2598737Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in 'Array#each'
+2026-08-18T13:01:52.2599670Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in 'Jekyll::Command.process_with_graceful_fail'
+2026-08-18T13:01:52.2600763Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/lib/jekyll/commands/build.rb:18:in 'block (2 levels) in Jekyll::Commands::Build.init_with_program'
+2026-08-18T13:01:52.2601869Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in 'block in Mercenary::Command#execute'
+2026-08-18T13:01:52.2602941Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in 'Array#each'
+2026-08-18T13:01:52.2603883Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in 'Mercenary::Command#execute'
+2026-08-18T13:01:52.2604848Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/mercenary-0.4.0/lib/mercenary/program.rb:44:in 'Mercenary::Program#go'
+2026-08-18T13:01:52.2605759Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/mercenary-0.4.0/lib/mercenary.rb:21:in 'Mercenary.program'
+2026-08-18T13:01:52.2606605Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/gems/jekyll-4.4.1/exe/jekyll:15:in '<top (required)>'
+2026-08-18T13:01:52.2607352Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/bin/jekyll:25:in 'Kernel#load'
+2026-08-18T13:01:52.2608050Z 	from /home/runner/work/zhangmq.github.io/zhangmq.github.io/vendor/bundle/ruby/3.4.0/bin/jekyll:25:in '<top (required)>'
+2026-08-18T13:01:52.2608690Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/cli/exec.rb:59:in 'Kernel.load'
+2026-08-18T13:01:52.2609313Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/cli/exec.rb:59:in 'Bundler::CLI::Exec#kernel_load'
+2026-08-18T13:01:52.2609949Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/cli/exec.rb:23:in 'Bundler::CLI::Exec#run'
+2026-08-18T13:01:52.2610543Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/cli.rb:452:in 'Bundler::CLI#exec'
+2026-08-18T13:01:52.2611224Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/vendor/thor/lib/thor/command.rb:28:in 'Bundler::Thor::Command#run'
+2026-08-18T13:01:52.2612045Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/vendor/thor/lib/thor/invocation.rb:127:in 'Bundler::Thor::Invocation#invoke_command'
+2026-08-18T13:01:52.2612897Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/vendor/thor/lib/thor.rb:538:in 'Bundler::Thor.dispatch'
+2026-08-18T13:01:52.2613547Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/cli.rb:35:in 'Bundler::CLI.dispatch'
+2026-08-18T13:01:52.2614273Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/vendor/thor/lib/thor/base.rb:584:in 'Bundler::Thor::Base::ClassMethods#start'
+2026-08-18T13:01:52.2614979Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/cli.rb:29:in 'Bundler::CLI.start'
+2026-08-18T13:01:52.2615630Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/exe/bundle:28:in 'block in <top (required)>'
+2026-08-18T13:01:52.2616347Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/3.4.0/bundler/friendly_errors.rb:117:in 'Bundler.with_friendly_errors'
+2026-08-18T13:01:52.2617044Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/lib/ruby/gems/3.4.0/gems/bundler-2.6.9/exe/bundle:20:in '<top (required)>'
+2026-08-18T13:01:52.2617596Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/bin/bundle:25:in 'Kernel#load'
+2026-08-18T13:01:52.2618031Z 	from /opt/hostedtoolcache/Ruby/3.4.10/x64/bin/bundle:25:in '<main>'
+2026-08-18T13:01:52.2629765Z ##[error]Process completed with exit code 1.
+2026-08-18T13:01:52.2739753Z Post job cleanup.
+2026-08-18T13:01:52.3571864Z [command]/usr/bin/git version
+2026-08-18T13:01:52.3620372Z git version 2.54.0
+2026-08-18T13:01:52.3671640Z Temporarily overriding HOME='/home/runner/work/_temp/e46f20aa-498b-425a-98e0-2b46b8fd1c2b' before making global git config changes
+2026-08-18T13:01:52.3672931Z Adding repository directory to the temporary git global config as a safe directory
+2026-08-18T13:01:52.3678468Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/zhangmq.github.io/zhangmq.github.io
+2026-08-18T13:01:52.3706535Z Removing SSH command configuration
+2026-08-18T13:01:52.3714258Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-08-18T13:01:52.3752083Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-08-18T13:01:52.3954746Z Removing HTTP extra header
+2026-08-18T13:01:52.3962099Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-08-18T13:01:52.3990460Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-08-18T13:01:52.4183407Z Removing includeIf entries pointing to credentials config files
+2026-08-18T13:01:52.4188766Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-08-18T13:01:52.4214918Z includeif.gitdir:/home/runner/work/zhangmq.github.io/zhangmq.github.io/.git.path
+2026-08-18T13:01:52.4216287Z includeif.gitdir:/home/runner/work/zhangmq.github.io/zhangmq.github.io/.git/worktrees/*.path
+2026-08-18T13:01:52.4217344Z includeif.gitdir:/github/workspace/.git.path
+2026-08-18T13:01:52.4218239Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-08-18T13:01:52.4222975Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/zhangmq.github.io/zhangmq.github.io/.git.path
+2026-08-18T13:01:52.4243294Z /home/runner/work/_temp/git-credentials-aa90f07f-3836-4351-a8c0-cf46ed0766fc.config
+2026-08-18T13:01:52.4251875Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/zhangmq.github.io/zhangmq.github.io/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-aa90f07f\-3836\-4351\-a8c0\-cf46ed0766fc\.config
+2026-08-18T13:01:52.4280382Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/zhangmq.github.io/zhangmq.github.io/.git/worktrees/*.path
+2026-08-18T13:01:52.4304821Z /home/runner/work/_temp/git-credentials-aa90f07f-3836-4351-a8c0-cf46ed0766fc.config
+2026-08-18T13:01:52.4313768Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/zhangmq.github.io/zhangmq.github.io/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-aa90f07f\-3836\-4351\-a8c0\-cf46ed0766fc\.config
+2026-08-18T13:01:52.4341003Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-08-18T13:01:52.4359913Z /github/runner_temp/git-credentials-aa90f07f-3836-4351-a8c0-cf46ed0766fc.config
+2026-08-18T13:01:52.4366382Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-aa90f07f\-3836\-4351\-a8c0\-cf46ed0766fc\.config
+2026-08-18T13:01:52.4391178Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-08-18T13:01:52.4409152Z /github/runner_temp/git-credentials-aa90f07f-3836-4351-a8c0-cf46ed0766fc.config
+2026-08-18T13:01:52.4415600Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-aa90f07f\-3836\-4351\-a8c0\-cf46ed0766fc\.config
+2026-08-18T13:01:52.4453254Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-08-18T13:01:52.4646254Z Removing credentials config '/home/runner/work/_temp/git-credentials-aa90f07f-3836-4351-a8c0-cf46ed0766fc.config'
+2026-08-18T13:01:52.4784007Z Cleaning up orphan processes
