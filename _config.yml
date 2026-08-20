@@ -135,7 +135,4 @@ jekyll-archives:
     tag: /tags/:name/
     category: /categories/:name/
 
-# Web Analytics (GoatCounter, https://zhangmq.goatcounter.com)
-analytics:
-  goatcounter:
-    id: "zhangmq"
+

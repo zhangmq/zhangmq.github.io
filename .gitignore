@@ -36,3 +36,6 @@ Thumbs.db
 .fork-work/
 .gh-cache/
 .npm-tmp/
+
+# 本地项目约定备忘（仅本地保留，不随仓库同步）
+AGENTS.md
