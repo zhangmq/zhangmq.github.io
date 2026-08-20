@@ -12,7 +12,7 @@ description: 为 niri Wayland 合成器补上屏幕自动旋转：x86 二合一�
 
 [English](/en/2026/08/19/iio-niri-toggle/)
 
-本来我以为这个项目没有人会感兴趣，但是意外收到了 [FearlessSpiff](https://github.com/FearlessSpiff) 提交的 PR，既然有人用，说明目前功能是正常的，所以我打算完善后正式以 1.0 发布。
+本来我以为这个项目没有人会感兴趣，但是意外收到了 [FearlessSpiff](https://github.com/FearlessSpiff) 提交的 PR，非常感谢！既然有人用，说明目前功能是正常的，所以我打算完善后正式以 1.0 发布。
 
 （因为对 release 流程不太熟悉，过程中版本号 bump 得略快了些，目前已经是 1.0.4 了。）
 

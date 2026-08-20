@@ -13,7 +13,7 @@ description: Screen auto-rotation for the niri Wayland compositor — a daemon f
 
 [中文](/zh/2026/08/19/iio-niri-toggle/)
 
-I thought nobody would be interested in this project, but FearlessSpiff unexpectedly submitted a PR. Since someone is actually using it, it must be working, so I decided to polish it and officially release it as 1.0.
+I thought nobody would be interested in this project, but [FearlessSpiff](https://github.com/FearlessSpiff) unexpectedly submitted a PR — thank you! Since someone is actually using it, it must be working, so I decided to polish it and officially release it as 1.0.
 
 (The version number climbed a bit faster than intended because I wasn't familiar with the release process — it's already at 1.0.4.)
 
