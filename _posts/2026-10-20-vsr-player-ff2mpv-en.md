@@ -3,7 +3,7 @@ layout: post
 lang: en
 hidden: true
 title: "Adding ff2mpv support to vsr-player"
-date: 2026-10-20 20:00:00 +0800
+date: 2026-10-20 19:00:00 +0800
 categories: tech
 tags: [mpv, libmpv, ff2mpv, yt-dlp, qt]
 permalink: /en/2026/10/20/vsr-player-ff2mpv/
