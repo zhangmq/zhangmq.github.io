@@ -50,6 +50,11 @@ jobs:
         env:
           JEKYLL_ENV: "production"
 
+      - name: Generate text sitemap
+        # GitHub Pages 的 .xml 不带 charset，GSC 在 *.github.io 上常读不了；
+        # .txt 是 text/plain; charset=utf-8，作为回退
+        run: python3 scripts/sitemap_txt.py "_site${{ steps.pages.outputs.base_path }}"
+
       - name: Test site
         run: |
           bundle exec htmlproofer _site \

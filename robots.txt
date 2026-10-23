@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow: /norobots/
+
+Sitemap: https://zhangmq.github.io/sitemap.xml
+# .txt 回退：GitHub Pages 的 .xml 不带 charset，GSC 在 *.github.io 上常读不了
+Sitemap: https://zhangmq.github.io/sitemap.txt
