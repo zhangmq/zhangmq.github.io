@@ -71,3 +71,14 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+  indexnow:
+    # 部署完成后把 sitemap 里的 URL 提交给 IndexNow（Bing 等）
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Submit URLs to IndexNow
+        run: python3 scripts/indexnow.py
